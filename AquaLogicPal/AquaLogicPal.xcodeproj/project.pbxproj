@@ -7,26 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02A692762A3E661100F88EBE /* aqualogicpalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A692752A3E661100F88EBE /* aqualogicpalApp.swift */; };
+		022823012A4BE9FD00ABC0C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022823002A4BE9FD00ABC0C5 /* LoginView.swift */; };
+		023B1F292A48CC890008D31E /* ChlorinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B1F282A48CC890008D31E /* ChlorinationView.swift */; };
+		023B1F2B2A49251D0008D31E /* ServiceModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B1F2A2A49251D0008D31E /* ServiceModalView.swift */; };
+		0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0272EEF72A428B6A000A70C5 /* PusherSwift */; };
+		0289CC532A47695900C91CFC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC522A47695900C91CFC /* StatusView.swift */; };
+		0289CC552A476CEF00C91CFC /* BlinkViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */; };
+		0289CC572A47965600C91CFC /* CustomPoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC562A47965600C91CFC /* CustomPoolCardView.swift */; };
+		0289CC592A479A1F00C91CFC /* SpaData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC582A479A1F00C91CFC /* SpaData.swift */; };
+		0289CC5B2A479A6500C91CFC /* SaltData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC5A2A479A6500C91CFC /* SaltData.swift */; };
+		0289CC5D2A47A58500C91CFC /* SaltLevelChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC5C2A47A58500C91CFC /* SaltLevelChartView.swift */; };
+		0289CC5F2A47A65F00C91CFC /* SpaUseChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC5E2A47A65F00C91CFC /* SpaUseChartView.swift */; };
+		0289CC612A47A7B900C91CFC /* ChlorinationGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC602A47A7B900C91CFC /* ChlorinationGaugeView.swift */; };
+		02A3D60F2A40C7A70046CD4F /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D60E2A40C7A70046CD4F /* TitleView.swift */; };
+		02A3D6112A40C9AA0046CD4F /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6102A40C9AA0046CD4F /* ImageView.swift */; };
+		02A3D6132A40CECC0046CD4F /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6122A40CECC0046CD4F /* BackgroundView.swift */; };
+		02A3D6172A40DBE10046CD4F /* AquaLogicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6162A40DBE10046CD4F /* AquaLogicClient.swift */; };
+		02A3D6192A40F00A0046CD4F /* PascalCaseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6182A40F00A0046CD4F /* PascalCaseDecoder.swift */; };
+		02A3D61B2A41044D0046CD4F /* PoolCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D61A2A41044D0046CD4F /* PoolCard.swift */; };
+		02A3D6222A4122370046CD4F /* ScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6212A4122370046CD4F /* ScreenView.swift */; };
+		02A3D6242A4123F00046CD4F /* RemoteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6232A4123F00046CD4F /* RemoteButton.swift */; };
+		02A692762A3E661100F88EBE /* AquaLogicPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A692752A3E661100F88EBE /* AquaLogicPalApp.swift */; };
 		02A692782A3E661100F88EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A692772A3E661100F88EBE /* ContentView.swift */; };
 		02A6927A2A3E661200F88EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A692792A3E661200F88EBE /* Assets.xcassets */; };
 		02A6927D2A3E661200F88EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A6927C2A3E661200F88EBE /* Preview Assets.xcassets */; };
-		02A6928A2A3E662C00F88EBE /* aqualogicminipalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A692892A3E662C00F88EBE /* aqualogicminipalApp.swift */; };
-		02A6928C2A3E662C00F88EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A6928B2A3E662C00F88EBE /* ContentView.swift */; };
-		02A6928E2A3E662D00F88EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A6928D2A3E662D00F88EBE /* Assets.xcassets */; };
-		02A692912A3E662D00F88EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A692902A3E662D00F88EBE /* Preview Assets.xcassets */; };
-		02A692942A3E662D00F88EBE /* aqualogicminipal Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 02A692872A3E662C00F88EBE /* aqualogicminipal Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		02B415562A4F3F1400BEE718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415552A4F3F1400BEE718 /* Extensions.swift */; };
+		02B415582A4F44A000BEE718 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415572A4F44A000BEE718 /* AuthViewModel.swift */; };
+		02B4155A2A4F5A7A00BEE718 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415592A4F5A7A00BEE718 /* NetworkManager.swift */; };
+		02B4155C2A4F5D1300BEE718 /* AquaLogicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B4155B2A4F5D1300BEE718 /* AquaLogicError.swift */; };
+		02B4155F2A4F6F9600BEE718 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 02B4155E2A4F6F9600BEE718 /* Alamofire */; };
+		02BF2AFD2A538DF1002437D1 /* AnimationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF2AFC2A538DF1002437D1 /* AnimationDetails.swift */; };
+		02C6B4FE2A3F9B81009AF3F2 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 02C6B4FD2A3F9B81009AF3F2 /* FirebaseAuth */; };
+		02C6B5032A3FA6DA009AF3F2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C6B5022A3FA6DA009AF3F2 /* GoogleService-Info.plist */; };
+		02C6B5082A3FA7B8009AF3F2 /* PoolControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5072A3FA7B8009AF3F2 /* PoolControlsView.swift */; };
+		02C6B50A2A3FAAD1009AF3F2 /* RemoteDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5092A3FAAD1009AF3F2 /* RemoteDisplayView.swift */; };
+		02C6B50C2A3FAADB009AF3F2 /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B50B2A3FAADB009AF3F2 /* DiagnosticsView.swift */; };
+		02C6B50E2A3FB0F8009AF3F2 /* TemperatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B50D2A3FB0F8009AF3F2 /* TemperatureCardView.swift */; };
+		02C6B5112A3FF61A009AF3F2 /* AquaLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5102A3FF61A009AF3F2 /* AquaLogic.swift */; };
+		02C6B5132A3FF7F9009AF3F2 /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5122A3FF7F9009AF3F2 /* Display.swift */; };
+		02C6B5152A3FF80E009AF3F2 /* DisplaySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5142A3FF80E009AF3F2 /* DisplaySection.swift */; };
+		02C6B5172A400337009AF3F2 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5162A400337009AF3F2 /* PoolCardView.swift */; };
+		02C6B5192A4003E2009AF3F2 /* PoolState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5182A4003E2009AF3F2 /* PoolState.swift */; };
+		02C6B51B2A400A13009AF3F2 /* RotatingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		02A692922A3E662D00F88EBE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 02A6926A2A3E661100F88EBE /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 02A692862A3E662C00F88EBE;
-			remoteInfo = "aqualogicminipal Watch App";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		02A692982A3E662D00F88EBE /* Embed Watch Content */ = {
@@ -35,7 +58,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				02A692942A3E662D00F88EBE /* aqualogicminipal Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,16 +65,50 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		022823002A4BE9FD00ABC0C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		023B1F282A48CC890008D31E /* ChlorinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChlorinationView.swift; sourceTree = "<group>"; };
+		023B1F2A2A49251D0008D31E /* ServiceModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModalView.swift; sourceTree = "<group>"; };
+		0289CC522A47695900C91CFC /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkViewModifier.swift; sourceTree = "<group>"; };
+		0289CC562A47965600C91CFC /* CustomPoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPoolCardView.swift; sourceTree = "<group>"; };
+		0289CC582A479A1F00C91CFC /* SpaData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaData.swift; sourceTree = "<group>"; };
+		0289CC5A2A479A6500C91CFC /* SaltData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltData.swift; sourceTree = "<group>"; };
+		0289CC5C2A47A58500C91CFC /* SaltLevelChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltLevelChartView.swift; sourceTree = "<group>"; };
+		0289CC5E2A47A65F00C91CFC /* SpaUseChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaUseChartView.swift; sourceTree = "<group>"; };
+		0289CC602A47A7B900C91CFC /* ChlorinationGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChlorinationGaugeView.swift; sourceTree = "<group>"; };
+		02A3D60E2A40C7A70046CD4F /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		02A3D6102A40C9AA0046CD4F /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
+		02A3D6122A40CECC0046CD4F /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		02A3D6142A40D5F90046CD4F /* aqualogicpal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aqualogicpal.entitlements; sourceTree = "<group>"; };
+		02A3D6162A40DBE10046CD4F /* AquaLogicClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaLogicClient.swift; sourceTree = "<group>"; };
+		02A3D6182A40F00A0046CD4F /* PascalCaseDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PascalCaseDecoder.swift; sourceTree = "<group>"; };
+		02A3D61A2A41044D0046CD4F /* PoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolCard.swift; sourceTree = "<group>"; };
+		02A3D6202A4110800046CD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		02A3D6212A4122370046CD4F /* ScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenView.swift; sourceTree = "<group>"; };
+		02A3D6232A4123F00046CD4F /* RemoteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteButton.swift; sourceTree = "<group>"; };
 		02A692722A3E661100F88EBE /* aqualogicpal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aqualogicpal.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		02A692752A3E661100F88EBE /* aqualogicpalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aqualogicpalApp.swift; sourceTree = "<group>"; };
+		02A692752A3E661100F88EBE /* AquaLogicPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaLogicPalApp.swift; sourceTree = "<group>"; };
 		02A692772A3E661100F88EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02A692792A3E661200F88EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02A6927C2A3E661200F88EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		02A692872A3E662C00F88EBE /* aqualogicminipal Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "aqualogicminipal Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		02A692892A3E662C00F88EBE /* aqualogicminipalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aqualogicminipalApp.swift; sourceTree = "<group>"; };
-		02A6928B2A3E662C00F88EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		02A6928D2A3E662D00F88EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		02A692902A3E662D00F88EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02B415552A4F3F1400BEE718 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		02B415572A4F44A000BEE718 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		02B415592A4F5A7A00BEE718 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		02B4155B2A4F5D1300BEE718 /* AquaLogicError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaLogicError.swift; sourceTree = "<group>"; };
+		02BF2AFC2A538DF1002437D1 /* AnimationDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDetails.swift; sourceTree = "<group>"; };
+		02C6B5022A3FA6DA009AF3F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		02C6B5072A3FA7B8009AF3F2 /* PoolControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolControlsView.swift; sourceTree = "<group>"; };
+		02C6B5092A3FAAD1009AF3F2 /* RemoteDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDisplayView.swift; sourceTree = "<group>"; };
+		02C6B50B2A3FAADB009AF3F2 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		02C6B50D2A3FB0F8009AF3F2 /* TemperatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureCardView.swift; sourceTree = "<group>"; };
+		02C6B5102A3FF61A009AF3F2 /* AquaLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaLogic.swift; sourceTree = "<group>"; };
+		02C6B5122A3FF7F9009AF3F2 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
+		02C6B5142A3FF80E009AF3F2 /* DisplaySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplaySection.swift; sourceTree = "<group>"; };
+		02C6B5162A400337009AF3F2 /* PoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolCardView.swift; sourceTree = "<group>"; };
+		02C6B5182A4003E2009AF3F2 /* PoolState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolState.swift; sourceTree = "<group>"; };
+		02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingIcon.swift; sourceTree = "<group>"; };
+		79E61A3340CD3B5B425ADD77 /* Pods_aqualogicminipal_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicminipal_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F464AEB6CADEB3C4ABFC2EE6 /* Pods_aqualogicpal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicpal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +116,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02A692842A3E662C00F88EBE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				02B4155F2A4F6F9600BEE718 /* Alamofire in Frameworks */,
+				0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */,
+				02C6B4FE2A3F9B81009AF3F2 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				02A692742A3E661100F88EBE /* aqualogicpal */,
-				02A692882A3E662C00F88EBE /* aqualogicminipal Watch App */,
 				02A692732A3E661100F88EBE /* Products */,
+				08C1760F1588E38718A5DF5E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				02A692722A3E661100F88EBE /* aqualogicpal.app */,
-				02A692872A3E662C00F88EBE /* aqualogicminipal Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +145,35 @@
 		02A692742A3E661100F88EBE /* aqualogicpal */ = {
 			isa = PBXGroup;
 			children = (
-				02A692752A3E661100F88EBE /* aqualogicpalApp.swift */,
+				02A3D6202A4110800046CD4F /* Info.plist */,
+				02A3D6142A40D5F90046CD4F /* aqualogicpal.entitlements */,
+				02C6B50F2A3FF603009AF3F2 /* Models */,
+				02A692752A3E661100F88EBE /* AquaLogicPalApp.swift */,
 				02A692772A3E661100F88EBE /* ContentView.swift */,
+				02C6B50D2A3FB0F8009AF3F2 /* TemperatureCardView.swift */,
+				02C6B5162A400337009AF3F2 /* PoolCardView.swift */,
+				0289CC562A47965600C91CFC /* CustomPoolCardView.swift */,
+				02C6B5072A3FA7B8009AF3F2 /* PoolControlsView.swift */,
+				02C6B5092A3FAAD1009AF3F2 /* RemoteDisplayView.swift */,
+				02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */,
+				02C6B50B2A3FAADB009AF3F2 /* DiagnosticsView.swift */,
+				02A3D60E2A40C7A70046CD4F /* TitleView.swift */,
+				02A3D6102A40C9AA0046CD4F /* ImageView.swift */,
+				0289CC522A47695900C91CFC /* StatusView.swift */,
+				02A3D6122A40CECC0046CD4F /* BackgroundView.swift */,
+				02A3D6182A40F00A0046CD4F /* PascalCaseDecoder.swift */,
+				02A3D6212A4122370046CD4F /* ScreenView.swift */,
+				02A3D6232A4123F00046CD4F /* RemoteButton.swift */,
+				0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */,
+				0289CC5C2A47A58500C91CFC /* SaltLevelChartView.swift */,
+				0289CC5E2A47A65F00C91CFC /* SpaUseChartView.swift */,
+				0289CC602A47A7B900C91CFC /* ChlorinationGaugeView.swift */,
+				023B1F282A48CC890008D31E /* ChlorinationView.swift */,
+				023B1F2A2A49251D0008D31E /* ServiceModalView.swift */,
+				022823002A4BE9FD00ABC0C5 /* LoginView.swift */,
+				02B415552A4F3F1400BEE718 /* Extensions.swift */,
 				02A692792A3E661200F88EBE /* Assets.xcassets */,
+				02C6B5022A3FA6DA009AF3F2 /* GoogleService-Info.plist */,
 				02A6927B2A3E661200F88EBE /* Preview Content */,
 			);
 			path = aqualogicpal;
@@ -110,23 +187,32 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		02A692882A3E662C00F88EBE /* aqualogicminipal Watch App */ = {
+		02C6B50F2A3FF603009AF3F2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				02A692892A3E662C00F88EBE /* aqualogicminipalApp.swift */,
-				02A6928B2A3E662C00F88EBE /* ContentView.swift */,
-				02A6928D2A3E662D00F88EBE /* Assets.xcassets */,
-				02A6928F2A3E662D00F88EBE /* Preview Content */,
+				02C6B5102A3FF61A009AF3F2 /* AquaLogic.swift */,
+				02C6B5122A3FF7F9009AF3F2 /* Display.swift */,
+				02C6B5142A3FF80E009AF3F2 /* DisplaySection.swift */,
+				02C6B5182A4003E2009AF3F2 /* PoolState.swift */,
+				02A3D6162A40DBE10046CD4F /* AquaLogicClient.swift */,
+				02A3D61A2A41044D0046CD4F /* PoolCard.swift */,
+				0289CC582A479A1F00C91CFC /* SpaData.swift */,
+				0289CC5A2A479A6500C91CFC /* SaltData.swift */,
+				02B415572A4F44A000BEE718 /* AuthViewModel.swift */,
+				02B415592A4F5A7A00BEE718 /* NetworkManager.swift */,
+				02B4155B2A4F5D1300BEE718 /* AquaLogicError.swift */,
+				02BF2AFC2A538DF1002437D1 /* AnimationDetails.swift */,
 			);
-			path = "aqualogicminipal Watch App";
+			path = Models;
 			sourceTree = "<group>";
 		};
-		02A6928F2A3E662D00F88EBE /* Preview Content */ = {
+		08C1760F1588E38718A5DF5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02A692902A3E662D00F88EBE /* Preview Assets.xcassets */,
+				79E61A3340CD3B5B425ADD77 /* Pods_aqualogicminipal_Watch_App.framework */,
+				F464AEB6CADEB3C4ABFC2EE6 /* Pods_aqualogicpal.framework */,
 			);
-			path = "Preview Content";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,28 +230,15 @@
 			buildRules = (
 			);
 			dependencies = (
-				02A692932A3E662D00F88EBE /* PBXTargetDependency */,
 			);
 			name = aqualogicpal;
+			packageProductDependencies = (
+				02C6B4FD2A3F9B81009AF3F2 /* FirebaseAuth */,
+				0272EEF72A428B6A000A70C5 /* PusherSwift */,
+				02B4155E2A4F6F9600BEE718 /* Alamofire */,
+			);
 			productName = aqualogicpal;
 			productReference = 02A692722A3E661100F88EBE /* aqualogicpal.app */;
-			productType = "com.apple.product-type.application";
-		};
-		02A692862A3E662C00F88EBE /* aqualogicminipal Watch App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02A692952A3E662D00F88EBE /* Build configuration list for PBXNativeTarget "aqualogicminipal Watch App" */;
-			buildPhases = (
-				02A692832A3E662C00F88EBE /* Sources */,
-				02A692842A3E662C00F88EBE /* Frameworks */,
-				02A692852A3E662C00F88EBE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "aqualogicminipal Watch App";
-			productName = "aqualogicminipal Watch App";
-			productReference = 02A692872A3E662C00F88EBE /* aqualogicminipal Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -181,9 +254,6 @@
 					02A692712A3E661100F88EBE = {
 						CreatedOnToolsVersion = 14.3;
 					};
-					02A692862A3E662C00F88EBE = {
-						CreatedOnToolsVersion = 14.3;
-					};
 				};
 			};
 			buildConfigurationList = 02A6926D2A3E661100F88EBE /* Build configuration list for PBXProject "aqualogicpal" */;
@@ -195,12 +265,16 @@
 				Base,
 			);
 			mainGroup = 02A692692A3E661100F88EBE;
+			packageReferences = (
+				02C6B4FC2A3F9B81009AF3F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */,
+				02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 02A692732A3E661100F88EBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				02A692712A3E661100F88EBE /* aqualogicpal */,
-				02A692862A3E662C00F88EBE /* aqualogicminipal Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -212,15 +286,7 @@
 			files = (
 				02A6927D2A3E661200F88EBE /* Preview Assets.xcassets in Resources */,
 				02A6927A2A3E661200F88EBE /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02A692852A3E662C00F88EBE /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02A692912A3E662D00F88EBE /* Preview Assets.xcassets in Resources */,
-				02A6928E2A3E662D00F88EBE /* Assets.xcassets in Resources */,
+				02C6B5032A3FA6DA009AF3F2 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,29 +297,46 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0289CC572A47965600C91CFC /* CustomPoolCardView.swift in Sources */,
+				02B4155C2A4F5D1300BEE718 /* AquaLogicError.swift in Sources */,
+				02A3D6132A40CECC0046CD4F /* BackgroundView.swift in Sources */,
 				02A692782A3E661100F88EBE /* ContentView.swift in Sources */,
-				02A692762A3E661100F88EBE /* aqualogicpalApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		02A692832A3E662C00F88EBE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02A6928C2A3E662C00F88EBE /* ContentView.swift in Sources */,
-				02A6928A2A3E662C00F88EBE /* aqualogicminipalApp.swift in Sources */,
+				02C6B50C2A3FAADB009AF3F2 /* DiagnosticsView.swift in Sources */,
+				0289CC5F2A47A65F00C91CFC /* SpaUseChartView.swift in Sources */,
+				02C6B51B2A400A13009AF3F2 /* RotatingIcon.swift in Sources */,
+				0289CC5B2A479A6500C91CFC /* SaltData.swift in Sources */,
+				0289CC552A476CEF00C91CFC /* BlinkViewModifier.swift in Sources */,
+				023B1F2B2A49251D0008D31E /* ServiceModalView.swift in Sources */,
+				02C6B5152A3FF80E009AF3F2 /* DisplaySection.swift in Sources */,
+				02B4155A2A4F5A7A00BEE718 /* NetworkManager.swift in Sources */,
+				023B1F292A48CC890008D31E /* ChlorinationView.swift in Sources */,
+				0289CC5D2A47A58500C91CFC /* SaltLevelChartView.swift in Sources */,
+				02A3D6172A40DBE10046CD4F /* AquaLogicClient.swift in Sources */,
+				02C6B5112A3FF61A009AF3F2 /* AquaLogic.swift in Sources */,
+				02C6B5172A400337009AF3F2 /* PoolCardView.swift in Sources */,
+				02A3D6192A40F00A0046CD4F /* PascalCaseDecoder.swift in Sources */,
+				02A3D61B2A41044D0046CD4F /* PoolCard.swift in Sources */,
+				02A692762A3E661100F88EBE /* AquaLogicPalApp.swift in Sources */,
+				0289CC532A47695900C91CFC /* StatusView.swift in Sources */,
+				02C6B5082A3FA7B8009AF3F2 /* PoolControlsView.swift in Sources */,
+				02C6B50E2A3FB0F8009AF3F2 /* TemperatureCardView.swift in Sources */,
+				02C6B5132A3FF7F9009AF3F2 /* Display.swift in Sources */,
+				022823012A4BE9FD00ABC0C5 /* LoginView.swift in Sources */,
+				02C6B50A2A3FAAD1009AF3F2 /* RemoteDisplayView.swift in Sources */,
+				02A3D6222A4122370046CD4F /* ScreenView.swift in Sources */,
+				02A3D60F2A40C7A70046CD4F /* TitleView.swift in Sources */,
+				02A3D6242A4123F00046CD4F /* RemoteButton.swift in Sources */,
+				02B415562A4F3F1400BEE718 /* Extensions.swift in Sources */,
+				0289CC612A47A7B900C91CFC /* ChlorinationGaugeView.swift in Sources */,
+				02B415582A4F44A000BEE718 /* AuthViewModel.swift in Sources */,
+				02A3D6112A40C9AA0046CD4F /* ImageView.swift in Sources */,
+				0289CC592A479A1F00C91CFC /* SpaData.swift in Sources */,
+				02BF2AFD2A538DF1002437D1 /* AnimationDetails.swift in Sources */,
+				02C6B5192A4003E2009AF3F2 /* PoolState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		02A692932A3E662D00F88EBE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 02A692862A3E662C00F88EBE /* aqualogicminipal Watch App */;
-			targetProxy = 02A692922A3E662D00F88EBE /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		02A6927E2A3E661200F88EBE /* Debug */ = {
@@ -306,13 +389,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -360,40 +444,46 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
 		02A692812A3E661200F88EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aqualogicpal/aqualogicpal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"aqualogicpal/Preview Content\"";
 				DEVELOPMENT_TEAM = HHT2S9TV9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = aqualogicpal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AquaLogic Pal";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -403,90 +493,35 @@
 		02A692822A3E661200F88EBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = aqualogicpal/aqualogicpal.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"aqualogicpal/Preview Content\"";
 				DEVELOPMENT_TEAM = HHT2S9TV9V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = aqualogicpal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "AquaLogic Pal";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		02A692962A3E662D00F88EBE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"aqualogicminipal Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HHT2S9TV9V;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = aqualogicminipal;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.brycecallender.aqualogicpal;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
-			};
-			name = Debug;
-		};
-		02A692972A3E662D00F88EBE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"aqualogicminipal Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = HHT2S9TV9V;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = aqualogicminipal;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.brycecallender.aqualogicpal;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 9.4;
 			};
 			name = Release;
 		};
@@ -511,16 +546,52 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		02A692952A3E662D00F88EBE /* Build configuration list for PBXNativeTarget "aqualogicminipal Watch App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				02A692962A3E662D00F88EBE /* Debug */,
-				02A692972A3E662D00F88EBE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pusher/pusher-websocket-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.1.3;
+			};
+		};
+		02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		02C6B4FC2A3F9B81009AF3F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0272EEF72A428B6A000A70C5 /* PusherSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */;
+			productName = PusherSwift;
+		};
+		02B4155E2A4F6F9600BEE718 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		02C6B4FD2A3F9B81009AF3F2 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02C6B4FC2A3F9B81009AF3F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 02A6926A2A3E661100F88EBE /* Project object */;
 }
