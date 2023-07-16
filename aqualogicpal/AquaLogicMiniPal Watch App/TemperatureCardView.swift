@@ -10,22 +10,25 @@ struct TemperatureCardView: View {
     
     var body: some View {
         ZStack {
-            VStack {
+            HStack {
                 Image(systemName: temperatureToIcon())
-                    //.renderingMode(.original)
                     .symbolRenderingMode(.hierarchical)
-                    .font(.system(size: 50))
-                
-                Text(label)
-                    .font(.largeTitle)
-                
-                Text(temperatureToLabel())
-                    .font(.title2)
+                    .font(.system(size: 60))
+
+                GeometryReader{ g in
+                    VStack(alignment: .center) {
+                        Text(label)
+                            .font(.title2)
+                        
+                        Text(temperatureToLabel())
+                            .font(.title3)
+                    }
+                    .padding()
+                }
             }
             .padding(20)
             .multilineTextAlignment(.center)
         }
-        .frame(width: 120, height: 120)
     }
     
     func temperatureToIcon() -> String {
@@ -34,7 +37,7 @@ struct TemperatureCardView: View {
         }
         
         var celsius = Float(temperature!) // assume its celsius first
-        if !isMetric {
+        if isMetric {
             celsius = floor((celsius - 32) * 5 / 9)
         }
 
@@ -52,14 +55,12 @@ struct TemperatureCardView: View {
             return "\(temp)°"
         }
         
-        return "Unknown"
+        return ""
     }
 }
 
 struct TemperatureCardView_Previews: PreviewProvider {
     static var previews: some View {
         TemperatureCardView(label: "Air", temperature: 90, isMetric: true)
-        TemperatureCardView(label: "Air", temperature: 65, isMetric: true)
-            .preferredColorScheme(.dark)
     }
 }

@@ -21,22 +21,18 @@ struct StatusView: View {
     }
     
     var body: some View {
-        HStack {
-            Image(systemName: imageName)
-                .foregroundColor(color)
-                .font(.system(.largeTitle))
-            
-            Text(client.aquaLogic?.status ?? "Unknown Status")
-                .font(.system(.largeTitle))
-                .blinking(shouldBlink: shouldBlink)
-        }
-        .onChange(of: client.aquaLogic, perform: { newValue in
-            if newValue == nil || shouldBlink {
-                return
+        ZStack {
+            HStack {
+                Image(systemName: imageName)
+                    .foregroundColor(color)
+                    .font(.system(.largeTitle))
+                
+                Text(client.aquaLogic?.status ?? "Unknown Status")
+                    .font(.system(.largeTitle))
+                    .blinking(shouldBlink: (client.aquaLogic?.status ?? "Ok") != "Ok")
             }
-            
-            shouldBlink = !(newValue!.isOk)
-        })
+        }
+        .padding()
     }
 }
 

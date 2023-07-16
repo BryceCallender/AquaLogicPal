@@ -14,8 +14,7 @@ struct PoolCardView: View {
                 if poolCard.isEnabled && animation != nil {
                     RotatingIcon(
                         imageName: poolCard.imageName,
-                        duration: animation!.duration
-                    )
+                        duration: animation!.duration)
                 } else {
                     ImageView(imageName: poolCard.imageName)
                 }
@@ -23,6 +22,7 @@ struct PoolCardView: View {
                 TitleView(title: poolCard.label)
                     .padding(.top, 2)
             }
+            .foregroundColor(poolCard.isEnabled ? Color.cardTextEnabled : Color.cardTextDisabled)
             .padding(20)
             .multilineTextAlignment(.center)
         }

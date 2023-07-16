@@ -8,9 +8,12 @@ struct PoolControlsView: View {
             TitleView(title: "Temperatures")
             
             HStack{
-                TemperatureCardView(label: "Air", temperature: client.aquaLogic?.airTemp, isMetric: true)
-                TemperatureCardView(label: "Pool", temperature: client.aquaLogic?.poolTemp, isMetric: true)
-                TemperatureCardView(label: "Spa", temperature: client.aquaLogic?.spaTemp, isMetric: true)
+                TemperatureCardView(label: "Air", temperature: client.aquaLogic?.airTemp, isMetric:
+                    client.aquaLogic?.isMetric ?? false)
+                TemperatureCardView(label: "Pool", temperature: client.aquaLogic?.poolTemp, isMetric:
+                    client.aquaLogic?.isMetric ?? false)
+                TemperatureCardView(label: "Spa", temperature: client.aquaLogic?.spaTemp, isMetric:
+                    client.aquaLogic?.isMetric ?? false)
             }
             .padding()
             
