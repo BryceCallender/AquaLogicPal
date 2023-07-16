@@ -12,17 +12,13 @@ struct CustomPoolCardView: View {
             VStack {
                 Image(poolCard.imageName)
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 100, height: 100)
+                    .frame(width: 20, height: 20)
                 
-                TitleView(title: poolCard.label)
-                    .padding(.top, 2)
+                Text(poolCard.label)
+                    .font(.system(size: 10))
             }
-            .foregroundColor(poolCard.isEnabled ? Color.cardTextEnabled : Color.cardTextDisabled)
-            .padding(20)
-            .multilineTextAlignment(.center)
+            .padding()
         }
-        .aspectRatio(1.0, contentMode: .fit)
     }
 }
 

@@ -4,6 +4,8 @@ import SwiftUI
 extension Color {
     static let cardBackground = Color("CardBackground")
     static let dragoonBlue = Color("DragoonBlue")
+    static let cardTextEnabled = Color("CardTextEnabled")
+    static let cardTextDisabled = Color("CardTextDisabled")
 }
 
 extension Formatter {

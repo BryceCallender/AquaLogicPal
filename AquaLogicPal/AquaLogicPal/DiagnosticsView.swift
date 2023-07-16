@@ -8,7 +8,7 @@ struct DiagnosticsView: View {
         ScrollView(showsIndicators: false) {
             VStack(spacing: 16) {
                 StatusView()
-                
+                    
                 ChlorinationView()
                     .padding(.bottom, 20)
                 

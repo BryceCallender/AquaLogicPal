@@ -1,5 +1,6 @@
 import SwiftUI
 import Firebase
+import Liquid
 
 struct LoginView: View {
     @State var email = ""
@@ -14,6 +15,7 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
+                    .shadow(radius: 10.0)
                     .padding()
                 
                 Image("LaunchImage")

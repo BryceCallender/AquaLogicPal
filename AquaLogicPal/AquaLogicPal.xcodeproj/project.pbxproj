@@ -10,6 +10,12 @@
 		022823012A4BE9FD00ABC0C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022823002A4BE9FD00ABC0C5 /* LoginView.swift */; };
 		023B1F292A48CC890008D31E /* ChlorinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B1F282A48CC890008D31E /* ChlorinationView.swift */; };
 		023B1F2B2A49251D0008D31E /* ServiceModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B1F2A2A49251D0008D31E /* ServiceModalView.swift */; };
+		024FA20E2A54F562009F7CA3 /* AquaLogicMiniPalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FA20D2A54F562009F7CA3 /* AquaLogicMiniPalApp.swift */; };
+		024FA2102A54F562009F7CA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024FA20F2A54F562009F7CA3 /* ContentView.swift */; };
+		024FA2122A54F563009F7CA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024FA2112A54F563009F7CA3 /* Assets.xcassets */; };
+		024FA2152A54F563009F7CA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024FA2142A54F563009F7CA3 /* Preview Assets.xcassets */; };
+		024FA2182A54F563009F7CA3 /* AquaLogicMiniPal Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 024FA20B2A54F562009F7CA3 /* AquaLogicMiniPal Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		025572842A61191E00854441 /* Liquid in Frameworks */ = {isa = PBXBuildFile; productRef = 025572832A61191E00854441 /* Liquid */; };
 		0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0272EEF72A428B6A000A70C5 /* PusherSwift */; };
 		0289CC532A47695900C91CFC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC522A47695900C91CFC /* StatusView.swift */; };
 		0289CC552A476CEF00C91CFC /* BlinkViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */; };
@@ -31,6 +37,21 @@
 		02A692782A3E661100F88EBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A692772A3E661100F88EBE /* ContentView.swift */; };
 		02A6927A2A3E661200F88EBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A692792A3E661200F88EBE /* Assets.xcassets */; };
 		02A6927D2A3E661200F88EBE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A6927C2A3E661200F88EBE /* Preview Assets.xcassets */; };
+		02AB9C272A5B5A6A00F1C32C /* TemperaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C262A5B5A6A00F1C32C /* TemperaturesView.swift */; };
+		02AB9C2A2A5B602500F1C32C /* AnimationDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02BF2AFC2A538DF1002437D1 /* AnimationDetails.swift */; };
+		02AB9C2B2A5B606900F1C32C /* RotatingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */; };
+		02AB9C2C2A5B606F00F1C32C /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6102A40C9AA0046CD4F /* ImageView.swift */; };
+		02ADDC012A59E6030043060F /* PoolCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D61A2A41044D0046CD4F /* PoolCard.swift */; };
+		02ADDC022A59E6030043060F /* PoolState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5182A4003E2009AF3F2 /* PoolState.swift */; };
+		02ADDC032A59E6030043060F /* AquaLogicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6162A40DBE10046CD4F /* AquaLogicClient.swift */; };
+		02ADDC042A59E6030043060F /* AquaLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5102A3FF61A009AF3F2 /* AquaLogic.swift */; };
+		02ADDC072A59E6210043060F /* PusherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 02ADDC062A59E6210043060F /* PusherSwift */; };
+		02ADDC082A59E6320043060F /* PascalCaseDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A3D6182A40F00A0046CD4F /* PascalCaseDecoder.swift */; };
+		02ADDC092A59E63C0043060F /* Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5122A3FF7F9009AF3F2 /* Display.swift */; };
+		02ADDC0A2A59E63C0043060F /* DisplaySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5142A3FF80E009AF3F2 /* DisplaySection.swift */; };
+		02ADDC0D2A59E7DF0043060F /* PoolControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADDC0C2A59E7DF0043060F /* PoolControlsView.swift */; };
+		02ADDC122A59FD560043060F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415552A4F3F1400BEE718 /* Extensions.swift */; };
+		02ADDC142A5A0E9D0043060F /* TemperatureCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02ADDC132A5A0E9D0043060F /* TemperatureCardView.swift */; };
 		02B415562A4F3F1400BEE718 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415552A4F3F1400BEE718 /* Extensions.swift */; };
 		02B415582A4F44A000BEE718 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415572A4F44A000BEE718 /* AuthViewModel.swift */; };
 		02B4155A2A4F5A7A00BEE718 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B415592A4F5A7A00BEE718 /* NetworkManager.swift */; };
@@ -49,7 +70,19 @@
 		02C6B5172A400337009AF3F2 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5162A400337009AF3F2 /* PoolCardView.swift */; };
 		02C6B5192A4003E2009AF3F2 /* PoolState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5182A4003E2009AF3F2 /* PoolState.swift */; };
 		02C6B51B2A400A13009AF3F2 /* RotatingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */; };
+		02D535292A5D0CF200C84EB4 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C282A5B600400F1C32C /* PoolCardView.swift */; };
+		02D5352A2A5D0CF200C84EB4 /* CustomPoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C2D2A5B619000F1C32C /* CustomPoolCardView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		024FA2162A54F563009F7CA3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 02A6926A2A3E661100F88EBE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 024FA20A2A54F562009F7CA3;
+			remoteInfo = "AquaLogicMiniPal Watch App";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		02A692982A3E662D00F88EBE /* Embed Watch Content */ = {
@@ -58,6 +91,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
+				024FA2182A54F563009F7CA3 /* AquaLogicMiniPal Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +102,11 @@
 		022823002A4BE9FD00ABC0C5 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		023B1F282A48CC890008D31E /* ChlorinationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChlorinationView.swift; sourceTree = "<group>"; };
 		023B1F2A2A49251D0008D31E /* ServiceModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceModalView.swift; sourceTree = "<group>"; };
+		024FA20B2A54F562009F7CA3 /* AquaLogicMiniPal Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AquaLogicMiniPal Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		024FA20D2A54F562009F7CA3 /* AquaLogicMiniPalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AquaLogicMiniPalApp.swift; sourceTree = "<group>"; };
+		024FA20F2A54F562009F7CA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		024FA2112A54F563009F7CA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		024FA2142A54F563009F7CA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0289CC522A47695900C91CFC /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkViewModifier.swift; sourceTree = "<group>"; };
 		0289CC562A47965600C91CFC /* CustomPoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPoolCardView.swift; sourceTree = "<group>"; };
@@ -91,6 +130,11 @@
 		02A692772A3E661100F88EBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		02A692792A3E661200F88EBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02A6927C2A3E661200F88EBE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		02AB9C262A5B5A6A00F1C32C /* TemperaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperaturesView.swift; sourceTree = "<group>"; };
+		02AB9C282A5B600400F1C32C /* PoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolCardView.swift; sourceTree = "<group>"; };
+		02AB9C2D2A5B619000F1C32C /* CustomPoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPoolCardView.swift; sourceTree = "<group>"; };
+		02ADDC0C2A59E7DF0043060F /* PoolControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolControlsView.swift; sourceTree = "<group>"; };
+		02ADDC132A5A0E9D0043060F /* TemperatureCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureCardView.swift; sourceTree = "<group>"; };
 		02B415552A4F3F1400BEE718 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		02B415572A4F44A000BEE718 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		02B415592A4F5A7A00BEE718 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -112,12 +156,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		024FA2082A54F562009F7CA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02ADDC072A59E6210043060F /* PusherSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02A6926F2A3E661100F88EBE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				02B4155F2A4F6F9600BEE718 /* Alamofire in Frameworks */,
 				0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */,
+				025572842A61191E00854441 /* Liquid in Frameworks */,
 				02C6B4FE2A3F9B81009AF3F2 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,10 +178,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024FA20C2A54F562009F7CA3 /* AquaLogicMiniPal Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				024FA20D2A54F562009F7CA3 /* AquaLogicMiniPalApp.swift */,
+				024FA20F2A54F562009F7CA3 /* ContentView.swift */,
+				02ADDC0C2A59E7DF0043060F /* PoolControlsView.swift */,
+				02ADDC132A5A0E9D0043060F /* TemperatureCardView.swift */,
+				02AB9C262A5B5A6A00F1C32C /* TemperaturesView.swift */,
+				02AB9C282A5B600400F1C32C /* PoolCardView.swift */,
+				02AB9C2D2A5B619000F1C32C /* CustomPoolCardView.swift */,
+				024FA2112A54F563009F7CA3 /* Assets.xcassets */,
+				024FA2132A54F563009F7CA3 /* Preview Content */,
+			);
+			path = "AquaLogicMiniPal Watch App";
+			sourceTree = "<group>";
+		};
+		024FA2132A54F563009F7CA3 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				024FA2142A54F563009F7CA3 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		02A692692A3E661100F88EBE = {
 			isa = PBXGroup;
 			children = (
 				02A692742A3E661100F88EBE /* aqualogicpal */,
+				024FA20C2A54F562009F7CA3 /* AquaLogicMiniPal Watch App */,
 				02A692732A3E661100F88EBE /* Products */,
 				08C1760F1588E38718A5DF5E /* Frameworks */,
 			);
@@ -138,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				02A692722A3E661100F88EBE /* aqualogicpal.app */,
+				024FA20B2A54F562009F7CA3 /* AquaLogicMiniPal Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -218,6 +297,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		024FA20A2A54F562009F7CA3 /* AquaLogicMiniPal Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 024FA2192A54F563009F7CA3 /* Build configuration list for PBXNativeTarget "AquaLogicMiniPal Watch App" */;
+			buildPhases = (
+				024FA2072A54F562009F7CA3 /* Sources */,
+				024FA2082A54F562009F7CA3 /* Frameworks */,
+				024FA2092A54F562009F7CA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AquaLogicMiniPal Watch App";
+			packageProductDependencies = (
+				02ADDC062A59E6210043060F /* PusherSwift */,
+			);
+			productName = "AquaLogicMiniPal Watch App";
+			productReference = 024FA20B2A54F562009F7CA3 /* AquaLogicMiniPal Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 		02A692712A3E661100F88EBE /* aqualogicpal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 02A692802A3E661200F88EBE /* Build configuration list for PBXNativeTarget "aqualogicpal" */;
@@ -230,12 +329,14 @@
 			buildRules = (
 			);
 			dependencies = (
+				024FA2172A54F563009F7CA3 /* PBXTargetDependency */,
 			);
 			name = aqualogicpal;
 			packageProductDependencies = (
 				02C6B4FD2A3F9B81009AF3F2 /* FirebaseAuth */,
 				0272EEF72A428B6A000A70C5 /* PusherSwift */,
 				02B4155E2A4F6F9600BEE718 /* Alamofire */,
+				025572832A61191E00854441 /* Liquid */,
 			);
 			productName = aqualogicpal;
 			productReference = 02A692722A3E661100F88EBE /* aqualogicpal.app */;
@@ -251,6 +352,9 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					024FA20A2A54F562009F7CA3 = {
+						CreatedOnToolsVersion = 14.3;
+					};
 					02A692712A3E661100F88EBE = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -269,17 +373,28 @@
 				02C6B4FC2A3F9B81009AF3F2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */,
 				02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				025572822A61191E00854441 /* XCRemoteSwiftPackageReference "liquid" */,
 			);
 			productRefGroup = 02A692732A3E661100F88EBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				02A692712A3E661100F88EBE /* aqualogicpal */,
+				024FA20A2A54F562009F7CA3 /* AquaLogicMiniPal Watch App */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		024FA2092A54F562009F7CA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				024FA2152A54F563009F7CA3 /* Preview Assets.xcassets in Resources */,
+				024FA2122A54F563009F7CA3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02A692702A3E661100F88EBE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +408,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		024FA2072A54F562009F7CA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02D535292A5D0CF200C84EB4 /* PoolCardView.swift in Sources */,
+				02D5352A2A5D0CF200C84EB4 /* CustomPoolCardView.swift in Sources */,
+				02ADDC092A59E63C0043060F /* Display.swift in Sources */,
+				02ADDC082A59E6320043060F /* PascalCaseDecoder.swift in Sources */,
+				02ADDC0A2A59E63C0043060F /* DisplaySection.swift in Sources */,
+				02AB9C2C2A5B606F00F1C32C /* ImageView.swift in Sources */,
+				02ADDC012A59E6030043060F /* PoolCard.swift in Sources */,
+				02ADDC042A59E6030043060F /* AquaLogic.swift in Sources */,
+				024FA2102A54F562009F7CA3 /* ContentView.swift in Sources */,
+				02ADDC142A5A0E9D0043060F /* TemperatureCardView.swift in Sources */,
+				024FA20E2A54F562009F7CA3 /* AquaLogicMiniPalApp.swift in Sources */,
+				02ADDC022A59E6030043060F /* PoolState.swift in Sources */,
+				02ADDC032A59E6030043060F /* AquaLogicClient.swift in Sources */,
+				02AB9C2A2A5B602500F1C32C /* AnimationDetails.swift in Sources */,
+				02AB9C272A5B5A6A00F1C32C /* TemperaturesView.swift in Sources */,
+				02ADDC122A59FD560043060F /* Extensions.swift in Sources */,
+				02AB9C2B2A5B606900F1C32C /* RotatingIcon.swift in Sources */,
+				02ADDC0D2A59E7DF0043060F /* PoolControlsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		02A6926E2A3E661100F88EBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,7 +478,75 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		024FA2172A54F563009F7CA3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 024FA20A2A54F562009F7CA3 /* AquaLogicMiniPal Watch App */;
+			targetProxy = 024FA2162A54F563009F7CA3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		024FA21A2A54F563009F7CA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AquaLogicMiniPal Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = HHT2S9TV9V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AquaLogicMiniPal;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.brycecallender.aqualogicpal;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		024FA21B2A54F563009F7CA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AquaLogicMiniPal Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = HHT2S9TV9V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = AquaLogicMiniPal;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.brycecallender.aqualogicpal;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brycecallender.aqualogicpal.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		02A6927E2A3E661200F88EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -458,6 +666,7 @@
 		02A692812A3E661200F88EBE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = aqualogicpal/aqualogicpal.entitlements;
@@ -493,6 +702,7 @@
 		02A692822A3E661200F88EBE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = aqualogicpal/aqualogicpal.entitlements;
@@ -528,6 +738,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		024FA2192A54F563009F7CA3 /* Build configuration list for PBXNativeTarget "AquaLogicMiniPal Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				024FA21A2A54F563009F7CA3 /* Debug */,
+				024FA21B2A54F563009F7CA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		02A6926D2A3E661100F88EBE /* Build configuration list for PBXProject "aqualogicpal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -549,6 +768,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		025572822A61191E00854441 /* XCRemoteSwiftPackageReference "liquid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/maustinstar/liquid.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pusher/pusher-websocket-swift.git";
@@ -576,7 +803,17 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		025572832A61191E00854441 /* Liquid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 025572822A61191E00854441 /* XCRemoteSwiftPackageReference "liquid" */;
+			productName = Liquid;
+		};
 		0272EEF72A428B6A000A70C5 /* PusherSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */;
+			productName = PusherSwift;
+		};
+		02ADDC062A59E6210043060F /* PusherSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0272EEF62A428B6A000A70C5 /* XCRemoteSwiftPackageReference "pusher-websocket-swift" */;
 			productName = PusherSwift;
