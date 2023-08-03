@@ -25,10 +25,6 @@ struct RemoteDisplayView: View {
             .padding(.bottom)
         }
     }
-    
-    func nothing() -> Void {
-        
-    }
 }
 
 struct RemoteDisplayView_Previews: PreviewProvider {

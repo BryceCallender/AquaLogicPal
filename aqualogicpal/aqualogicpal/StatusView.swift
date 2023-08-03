@@ -2,7 +2,6 @@ import SwiftUI
 
 struct StatusView: View {
     @StateObject var client = AquaLogicClient.shared
-    @State private var shouldBlink: Bool = false
     
     var imageName: String {
         if let isOk = client.aquaLogic?.isOk {
@@ -21,23 +20,23 @@ struct StatusView: View {
     }
     
     var body: some View {
-        ZStack {
+        VStack(alignment: .leading, spacing: 4) {
+            TitleView("Status")
+            
             HStack {
                 Image(systemName: imageName)
                     .foregroundColor(color)
                     .font(.system(.largeTitle))
                 
-                Text(client.aquaLogic?.status ?? "Unknown Status")
+                Text(client.aquaLogic?.status ?? "Unknown")
                     .font(.system(.largeTitle))
-                    .blinking(shouldBlink: (client.aquaLogic?.status ?? "Ok") != "Ok")
             }
+            .frame(maxWidth: .infinity, alignment: .center)
         }
-        .padding()
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 }
 
-struct StatusView_Previews: PreviewProvider {
-    static var previews: some View {
-        StatusView()
-    }
+#Preview {
+    StatusView()
 }

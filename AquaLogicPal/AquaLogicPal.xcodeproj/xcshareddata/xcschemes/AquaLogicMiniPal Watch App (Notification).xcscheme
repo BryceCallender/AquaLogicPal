@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1430"
+   LastUpgradeVersion = "1500"
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -17,7 +17,7 @@
                BlueprintIdentifier = "024FA20A2A54F562009F7CA3"
                BuildableName = "AquaLogicMiniPal Watch App.app"
                BlueprintName = "AquaLogicMiniPal Watch App"
-               ReferencedContainer = "container:aqualogicpal.xcodeproj">
+               ReferencedContainer = "container:AquaLogicPal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,7 +31,7 @@
                BlueprintIdentifier = "02A692712A3E661100F88EBE"
                BuildableName = "aqualogicpal.app"
                BlueprintName = "aqualogicpal"
-               ReferencedContainer = "container:aqualogicpal.xcodeproj">
+               ReferencedContainer = "container:AquaLogicPal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,7 +61,7 @@
             BlueprintIdentifier = "024FA20A2A54F562009F7CA3"
             BuildableName = "AquaLogicMiniPal Watch App.app"
             BlueprintName = "AquaLogicMiniPal Watch App"
-            ReferencedContainer = "container:aqualogicpal.xcodeproj">
+            ReferencedContainer = "container:AquaLogicPal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -79,7 +79,7 @@
             BlueprintIdentifier = "024FA20A2A54F562009F7CA3"
             BuildableName = "AquaLogicMiniPal Watch App.app"
             BlueprintName = "AquaLogicMiniPal Watch App"
-            ReferencedContainer = "container:aqualogicpal.xcodeproj">
+            ReferencedContainer = "container:AquaLogicPal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

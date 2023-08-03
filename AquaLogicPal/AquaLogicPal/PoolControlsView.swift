@@ -5,7 +5,7 @@ struct PoolControlsView: View {
     
     var body: some View {
         VStack {
-            TitleView(title: "Temperatures")
+            TitleView("Temperatures")
             
             HStack{
                 TemperatureCardView(label: "Air", temperature: client.aquaLogic?.airTemp, isMetric:
@@ -17,7 +17,7 @@ struct PoolControlsView: View {
             }
             .padding()
             
-            TitleView(title: "Controls")
+            TitleView("Controls")
             
             ScrollView(showsIndicators: false) {
                 Grid {

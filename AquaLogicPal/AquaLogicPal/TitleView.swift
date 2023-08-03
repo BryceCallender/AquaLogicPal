@@ -1,7 +1,11 @@
 import SwiftUI
 
 struct TitleView: View {
-    var title: String
+    let title: String
+    
+    init(_ title: String) {
+        self.title = title
+    }
     
     var body: some View {
         Text(title)
@@ -11,6 +15,6 @@ struct TitleView: View {
 
 struct TitleView_Previews: PreviewProvider {
     static var previews: some View {
-        TitleView(title: "Title")
+        TitleView("Title")
     }
 }

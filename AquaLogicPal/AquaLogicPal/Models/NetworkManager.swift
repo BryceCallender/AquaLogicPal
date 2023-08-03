@@ -18,7 +18,11 @@ class NetworkManager: ObservableObject {
     static let setStateEndpoint = "\(aquaLogicApiGroup)/setstate"
     
     private let session: Session = {
-        let manager = ServerTrustManager(evaluators: [ "\(ip)": DisabledTrustEvaluator()])
+        let evaluators: [String: ServerTrustEvaluating] = [
+            "192.168.86.52": DisabledTrustEvaluator()
+        ]
+        
+        let manager = ServerTrustManager(evaluators: evaluators)
         let configuration = URLSessionConfiguration.af.default
         return Session(configuration: configuration, serverTrustManager: manager)
     }()
@@ -31,6 +35,7 @@ class NetworkManager: ObservableObject {
         decoder.dateDecodingStrategy = .customISO8601
         
         session.request(endpoint).responseDecodable(of: T.self, decoder: decoder) { response in
+            print(response)
             switch response.result {
                 case .success(let value):
                     completion(value)

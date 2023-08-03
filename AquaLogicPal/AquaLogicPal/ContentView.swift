@@ -34,9 +34,9 @@ struct ContentView: View {
                     Text("Diagnostics")
                 }
         }
-        .onChange(of: client.aquaLogic, perform: { newValue in
+        .onChange(of: client.aquaLogic) { oldState, newState in
             isPresented = client.aquaLogic.inServiceMode
-        })
+        }
         .fullScreenCover(isPresented: $isPresented, content: ServiceModalView.init)
     }
 }

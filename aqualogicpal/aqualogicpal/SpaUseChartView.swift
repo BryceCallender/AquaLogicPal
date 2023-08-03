@@ -19,7 +19,8 @@ struct SpaUseChartView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            TitleView(title: "Spa Use")
+            TitleView("Spa Use")
+            
             Chart {
                 if showEmptyState {
                     RuleMark(y: .value("No Data", 0))

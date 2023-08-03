@@ -1,13 +1,6 @@
 import Foundation
 import SwiftUI
 
-extension Color {
-    static let cardBackground = Color("CardBackground")
-    static let dragoonBlue = Color("DragoonBlue")
-    static let cardTextEnabled = Color("CardTextEnabled")
-    static let cardTextDisabled = Color("CardTextDisabled")
-}
-
 extension Formatter {
     static let iso8601withFractionalSeconds: ISO8601DateFormatter = {
         let formatter = ISO8601DateFormatter()

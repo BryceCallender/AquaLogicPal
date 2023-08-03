@@ -5,7 +5,8 @@ struct ChlorinationView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            TitleView(title: "Chlorination")
+            TitleView("Chlorination")
+            
             HStack {
                 Spacer()
                 ChlorinationGaugeView(label: "Pool", chlorinationPercentage: client.aquaLogic?.poolChlorinatorPercent)
@@ -19,8 +20,6 @@ struct ChlorinationView: View {
     }
 }
 
-struct ChlorinationView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChlorinationView()
-    }
+#Preview {
+    ChlorinationView()
 }

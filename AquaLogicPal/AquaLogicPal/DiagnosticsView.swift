@@ -5,25 +5,26 @@ struct DiagnosticsView: View {
     @EnvironmentObject private var networkManager: NetworkManager
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 16) {
-                StatusView()
+        NavigationStack {
+            ScrollView(showsIndicators: false) {
+                VStack(spacing: 16) {
+                    StatusView()
+                        
+                    ChlorinationView()
+                        .padding(.bottom, 20)
                     
-                ChlorinationView()
-                    .padding(.bottom, 20)
-                
-                SaltLevelChartView()
-                SpaUseChartView()
-            }
-            .padding()
+                        SaltLevelChartView()
+
+                    
+                    SpaUseChartView()
+                }
+                .padding()
+            }.clipped()
         }
-        .clipped()
     }
 }
 
-struct DiagnosticsView_Previews: PreviewProvider {
-    static var previews: some View {
-        DiagnosticsView()
-            .environmentObject(NetworkManager())
-    }
+#Preview {
+    DiagnosticsView()
+        .environmentObject(NetworkManager())
 }

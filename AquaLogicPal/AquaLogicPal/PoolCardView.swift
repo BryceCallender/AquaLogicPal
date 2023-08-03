@@ -7,7 +7,7 @@ struct PoolCardView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(poolCard.isEnabled ? Color.dragoonBlue : Color.cardBackground)
+                .fill(poolCard.isEnabled ? .dragoonBlue : .cardBackground)
                 .shadow(radius: 10)
 
             VStack {
@@ -19,10 +19,10 @@ struct PoolCardView: View {
                     ImageView(imageName: poolCard.imageName)
                 }
                 
-                TitleView(title: poolCard.label)
+                TitleView(poolCard.label)
                     .padding(.top, 2)
             }
-            .foregroundColor(poolCard.isEnabled ? Color.cardTextEnabled : Color.cardTextDisabled)
+            .foregroundColor(poolCard.isEnabled ? .cardTextEnabled : .cardTextDisabled)
             .padding(20)
             .multilineTextAlignment(.center)
         }
