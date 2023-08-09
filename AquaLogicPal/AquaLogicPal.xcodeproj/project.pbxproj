@@ -72,6 +72,8 @@
 		02C6B5172A400337009AF3F2 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5162A400337009AF3F2 /* PoolCardView.swift */; };
 		02C6B5192A4003E2009AF3F2 /* PoolState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B5182A4003E2009AF3F2 /* PoolState.swift */; };
 		02C6B51B2A400A13009AF3F2 /* RotatingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */; };
+		02C862522A7C44B3002D77A4 /* PoolStatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C862512A7C44B3002D77A4 /* PoolStatesView.swift */; };
+		02C862542A7CA266002D77A4 /* TemperaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C862532A7CA265002D77A4 /* TemperaturesView.swift */; };
 		02D535292A5D0CF200C84EB4 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C282A5B600400F1C32C /* PoolCardView.swift */; };
 		02D5352A2A5D0CF200C84EB4 /* CustomPoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C2D2A5B619000F1C32C /* CustomPoolCardView.swift */; };
 /* End PBXBuildFile section */
@@ -155,6 +157,8 @@
 		02C6B5162A400337009AF3F2 /* PoolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolCardView.swift; sourceTree = "<group>"; };
 		02C6B5182A4003E2009AF3F2 /* PoolState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolState.swift; sourceTree = "<group>"; };
 		02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingIcon.swift; sourceTree = "<group>"; };
+		02C862512A7C44B3002D77A4 /* PoolStatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PoolStatesView.swift; path = AquaLogicPal/PoolStatesView.swift; sourceTree = SOURCE_ROOT; };
+		02C862532A7CA265002D77A4 /* TemperaturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TemperaturesView.swift; path = AquaLogicPal/TemperaturesView.swift; sourceTree = SOURCE_ROOT; };
 		79E61A3340CD3B5B425ADD77 /* Pods_aqualogicminipal_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicminipal_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F464AEB6CADEB3C4ABFC2EE6 /* Pods_aqualogicpal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicpal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -237,6 +241,8 @@
 				02C6B5162A400337009AF3F2 /* PoolCardView.swift */,
 				0289CC562A47965600C91CFC /* CustomPoolCardView.swift */,
 				02C6B5072A3FA7B8009AF3F2 /* PoolControlsView.swift */,
+				02C862532A7CA265002D77A4 /* TemperaturesView.swift */,
+				02C862512A7C44B3002D77A4 /* PoolStatesView.swift */,
 				02C6B5092A3FAAD1009AF3F2 /* RemoteDisplayView.swift */,
 				02C6B51A2A400A13009AF3F2 /* RotatingIcon.swift */,
 				02C6B50B2A3FAADB009AF3F2 /* DiagnosticsView.swift */,
@@ -447,6 +453,7 @@
 				02181BE82A64B1E800C6F9D3 /* PoolEventsChartView.swift in Sources */,
 				02B4155C2A4F5D1300BEE718 /* AquaLogicError.swift in Sources */,
 				02A3D6132A40CECC0046CD4F /* BackgroundView.swift in Sources */,
+				02C862522A7C44B3002D77A4 /* PoolStatesView.swift in Sources */,
 				02A692782A3E661100F88EBE /* ContentView.swift in Sources */,
 				02C6B50C2A3FAADB009AF3F2 /* DiagnosticsView.swift in Sources */,
 				0289CC5F2A47A65F00C91CFC /* SpaUseChartView.swift in Sources */,
@@ -463,6 +470,7 @@
 				02C6B5112A3FF61A009AF3F2 /* AquaLogic.swift in Sources */,
 				02C6B5172A400337009AF3F2 /* PoolCardView.swift in Sources */,
 				02A3D6192A40F00A0046CD4F /* PascalCaseDecoder.swift in Sources */,
+				02C862542A7CA266002D77A4 /* TemperaturesView.swift in Sources */,
 				02A3D61B2A41044D0046CD4F /* PoolCard.swift in Sources */,
 				02A692762A3E661100F88EBE /* AquaLogicPalApp.swift in Sources */,
 				0289CC532A47695900C91CFC /* StatusView.swift in Sources */,

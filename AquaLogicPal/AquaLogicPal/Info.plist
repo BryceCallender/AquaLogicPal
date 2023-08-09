@@ -4,13 +4,6 @@
 <dict>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		<key>NSAllowsLocalNetworking</key>
-		<false/>
-		<key>NSExceptionDomains</key>
-		<dict>
-			<key>192.168.86.52</key>
-			<string></string>
-		</dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<string>YES</string>
 	</dict>

@@ -7,7 +7,7 @@ struct RemoteButton: View {
         Button(action: {}) {
             Text(label)
                 .font(.title)
-                .frame(width: 100, height: 50)
+                .frame(maxWidth: .infinity, maxHeight: 50)
         }
         .cornerRadius(10)
         .buttonStyle(.borderedProminent)

@@ -10,11 +10,15 @@ struct TemperatureCardView: View {
     
     var body: some View {
         ZStack {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .fill(.cardBackground)
+                .shadow(radius: 10)
+            
             VStack {
                 Image(systemName: temperatureToIcon())
-                    //.renderingMode(.original)
                     .symbolRenderingMode(.hierarchical)
                     .font(.system(size: 50))
+                    .frame(height: 50)
                 
                 Text(label)
                     .font(.largeTitle)
@@ -22,10 +26,10 @@ struct TemperatureCardView: View {
                 Text(temperatureToLabel())
                     .font(.title2)
             }
-            .padding(20)
+            .padding()
             .multilineTextAlignment(.center)
         }
-        .frame(width: 120, height: 120)
+        .frame(maxHeight: 120)
     }
     
     func temperatureToIcon() -> String {

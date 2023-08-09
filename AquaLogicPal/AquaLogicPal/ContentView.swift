@@ -15,24 +15,38 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            PoolControlsView()
-                .tabItem {
-                    Image(systemName: "av.remote")
-                    Text("Controls")
-                }
+            NavigationView {
+                PoolControlsView()
+                    .navigationTitle("Controls")
+                    .toolbar {
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+//                                Label("Account", systemImage: "person.crop.circle")
+//                                    .foregroundStyle(.black)
+                            })
+                        }
+                    }
+            }
+            .tabItem {
+                Image(systemName: "av.remote")
+                Text("Controls")
+            }
             
             RemoteDisplayView()
-                .tabItem {
-                    Image(systemName: "display")
-                    Text("Remote Display")
-                }
+            .tabItem {
+                Image(systemName: "display")
+                Text("Remote Display")
+            }
             
-            DiagnosticsView()
-                .badge(badgeValue)
-                .tabItem {
-                    Image(systemName: "gearshape")
-                    Text("Diagnostics")
-                }
+            NavigationView {
+                DiagnosticsView()
+                    .navigationTitle("Diagnostics")
+            }
+            .badge(badgeValue)
+            .tabItem {
+                Image(systemName: "gearshape")
+                Text("Diagnostics")
+            }
         }
         .onChange(of: client.aquaLogic) { oldState, newState in
             isPresented = client.aquaLogic.inServiceMode

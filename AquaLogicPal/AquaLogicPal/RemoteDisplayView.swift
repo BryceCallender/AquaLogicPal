@@ -22,7 +22,7 @@ struct RemoteDisplayView: View {
                     Spacer()
                 }
             }
-            .padding(.bottom)
+            .padding([.bottom, .leading, .trailing])
         }
     }
 }
