@@ -52,14 +52,6 @@ struct SaltLevelChart: View {
                     })
             } else {
                 ForEach(data) { saltData in
-                    //                        AreaMark(
-                    //                            x: .value("Date", saltData.eventTime, unit: .month),
-                    //                            y: .value("Salt (PPM)", saltData.salt)
-                    //                        )
-                    //                        .foregroundStyle(lineGradient.opacity(0.5))
-                    //                        .alignsMarkStylesWithPlotArea()
-                    //                        .accessibilityHidden(true)
-                    
                     LineMark(
                         x: .value("Date", saltData.eventTime, unit: .month),
                         y: .value("Salt (PPM)", saltData.salt)

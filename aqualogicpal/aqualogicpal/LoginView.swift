@@ -56,6 +56,7 @@ struct LoginView: View {
     }
 
     func login() {
+        // todo: swap to supabase auth in order to conform to RLS
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 print(error?.localizedDescription ?? "")

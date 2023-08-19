@@ -2,9 +2,9 @@ import Foundation
 import Alamofire
 
 class NetworkManager: ObservableObject {
-    static let ip: String = "192.168.86.52"
+    static let domain: String = "aqualogicpal.com"
     static let port: Int = 5002
-    static let baseUrl: String = "https://\(ip):\(port)"
+    static let baseUrl: String = "https://\(domain):\(port)"
 
     // dashboard information
     static let dashboardEndpoint = "/api/dashboard"
@@ -17,24 +17,15 @@ class NetworkManager: ObservableObject {
     static let sendKeyEndpoint = "\(aquaLogicApiGroup)/key"
     static let setStateEndpoint = "\(aquaLogicApiGroup)/setstate"
     
-    private let session: Session = {
-        let evaluators: [String: ServerTrustEvaluating] = [
-            "192.168.86.52": DisabledTrustEvaluator()
-        ]
-        
-        let manager = ServerTrustManager(evaluators: evaluators)
-        let configuration = URLSessionConfiguration.af.default
-        return Session(configuration: configuration, serverTrustManager: manager)
-    }()
-    
     func get<T: Decodable>(type: T.Type, route: String, completion: @escaping (_ data: T?) -> Void) async throws {
         let endpoint = "\(NetworkManager.baseUrl)\(route)"
+        print(endpoint)
         
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromPascalCase
         decoder.dateDecodingStrategy = .customISO8601
         
-        session.request(endpoint).responseDecodable(of: T.self, decoder: decoder) { response in
+        AF.request(endpoint).responseDecodable(of: T.self, decoder: decoder) { response in
             print(response)
             switch response.result {
                 case .success(let value):

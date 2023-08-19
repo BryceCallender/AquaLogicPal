@@ -3,7 +3,9 @@ import SwiftUI
 struct RemoteDisplayView: View {
     var body: some View {
         VStack {
+            Spacer()
             ScreenView()
+            Spacer()
             
             Grid {
                 GridRow {

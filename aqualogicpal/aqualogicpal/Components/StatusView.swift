@@ -31,7 +31,7 @@ struct StatusView: View {
                 Text(client.aquaLogic?.status ?? "Unknown")
                     .font(.system(.largeTitle))
             }
-            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: .infinity, alignment: .leading)
     }

@@ -18,14 +18,6 @@ struct ContentView: View {
             NavigationView {
                 PoolControlsView()
                     .navigationTitle("Controls")
-                    .toolbar {
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-//                                Label("Account", systemImage: "person.crop.circle")
-//                                    .foregroundStyle(.black)
-                            })
-                        }
-                    }
             }
             .tabItem {
                 Image(systemName: "av.remote")
@@ -36,6 +28,15 @@ struct ContentView: View {
             .tabItem {
                 Image(systemName: "display")
                 Text("Remote Display")
+            }
+            
+            NavigationStack {
+                MaintenanceView()
+                    .navigationTitle("Maintenance")
+            }
+            .tabItem {
+                Image(systemName: "calendar.badge.checkmark")
+                Text("Maintenance")
             }
             
             NavigationView {
