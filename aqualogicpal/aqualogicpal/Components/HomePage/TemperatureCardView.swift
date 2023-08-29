@@ -9,11 +9,7 @@ struct TemperatureCardView: View {
     var isMetric: Bool
     
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(.cardBackground)
-                .shadow(radius: 10)
-            
+        Card {
             VStack {
                 Image(systemName: temperatureToIcon())
                     .symbolRenderingMode(.hierarchical)

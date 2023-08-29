@@ -5,19 +5,41 @@ struct DiagnosticsView: View {
     @EnvironmentObject private var networkManager: NetworkManager
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
-            VStack(spacing: 16) {
+        List {
+            Section {
                 StatusView()
-                    
-                ChlorinationView()
-                    .padding(.bottom, 20)
-                
-                    SaltLevelChartView()
-
-                
-                SpaUseChartView()
             }
-            .padding()
+                 
+            Section {
+                ChlorinationView()
+                    .padding(.bottom, 30)
+            }
+                
+            Section {
+                NavigationLink("Over the last year the salt levels averaged around 2400 PPM.") {
+                    SaltLevelRangeChart(isOverview: false)
+                }
+                
+                SaltLevelRangeChart(isOverview: true)
+            }
+
+            Section {
+                NavigationLink("Over the last year you used the spa an average of 7 times.") {
+                    SpaUseChart(isOverview: false)
+                }
+                
+                SpaUseChart(isOverview: true)
+            }
+            
+            Section {
+                NavigationLink(destination: PoolEventUsageChart(isOverview: false)) {
+                    HStack {
+                        Text("Most popular event type is X with % of all events")
+                        
+                        PoolEventUsageChart(isOverview: true)
+                    }
+                }
+            }
         }
     }
 }

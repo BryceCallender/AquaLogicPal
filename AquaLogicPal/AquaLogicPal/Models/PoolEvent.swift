@@ -1,13 +1,13 @@
 import Foundation
 
-struct SaltData: Codable, Identifiable {
+struct PoolEvent: Codable, Identifiable {
+    var id: Int?
     var eventTime: Date
-    var salt: Double
-    var id: Int
+    var type: PoolEventType
     
     enum CodingKeys: String, CodingKey {
         case id = "ID"
         case eventTime = "EventTime"
-        case salt = "Salt"
+        case type = "PoolEventType"
     }
 }

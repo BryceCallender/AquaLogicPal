@@ -5,7 +5,9 @@ struct SpaData: Codable, Identifiable {
     var count: Int
     var id = UUID()
     
-    enum CodingKeys:String,CodingKey {
-        case eventTime, count
+    enum CodingKeys: String, CodingKey {
+        case id = "ID"
+        case eventTime = "EventTime"
+        case count = "Count"
     }
 }

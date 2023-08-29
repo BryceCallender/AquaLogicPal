@@ -14,7 +14,7 @@ struct AcidContainer: View {
                     .resizable()
                     .renderingMode(.template)
                     .aspectRatio(contentMode: .fit)
-                    .foregroundStyle(.black.opacity(0.1))
+                    .foregroundStyle(.gray.opacity(0.3))
             
                 AcidWave(progress: progress, waveHeight: 0.015, offset: waveOffset)
                     .fill(.yellow)
@@ -27,16 +27,16 @@ struct AcidContainer: View {
             }
             .frame(width: size.width, height: size.height, alignment: .center)
             .onAppear {
-                withAnimation(.linear(duration: 1.5).repeatForever(autoreverses: false)) {
-                    self.waveOffset = size.width
-                }
+//                withAnimation(.linear(duration: 1.5).repeatForever(autoreverses: false)) {
+//                    self.waveOffset = size.width
+//                }
             }
         }
     }
 }
 
 #Preview {
-    AcidContainer(progress: 0.25)
+    AcidContainer(progress: 0.50)
 }
 
 struct AcidWave: Shape {

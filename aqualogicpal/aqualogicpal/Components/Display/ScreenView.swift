@@ -12,7 +12,12 @@ struct ScreenView: View {
     
     var body: some View {
         ZStack {
-            Image(systemName: "display")
+            Image(systemName: "rectangle.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .foregroundStyle(.cardBackground)
+            
+            Image(systemName: "rectangle")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
 
@@ -33,7 +38,6 @@ struct ScreenView: View {
                     }
                 }
             }
-            .offset(y: -20)
         }
         .padding()
     }
@@ -42,5 +46,8 @@ struct ScreenView: View {
 struct ScreenView_Previews: PreviewProvider {
     static var previews: some View {
         ScreenView()
+        
+        ScreenView()
+            .preferredColorScheme(.dark)
     }
 }

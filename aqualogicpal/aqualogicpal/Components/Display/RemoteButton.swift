@@ -11,6 +11,7 @@ struct RemoteButton: View {
         }
         .cornerRadius(10)
         .buttonStyle(.borderedProminent)
+        .tint(.dragoonBlue)
     }
 }
 

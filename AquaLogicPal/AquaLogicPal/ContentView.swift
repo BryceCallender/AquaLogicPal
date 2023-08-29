@@ -1,67 +1,39 @@
 import SwiftUI
+import GoTrue
 
 struct ContentView: View {
-    @EnvironmentObject private var authModel: AuthViewModel
-    @StateObject var client = AquaLogicClient.shared
-    @State private var isPresented = false
-    
-    var badgeValue: String? {
-        if !(client.aquaLogic?.isOk ?? true) {
-            return "!"
-        }
-        
-        return nil
-    }
+    @State var authEvent: AuthChangeEvent?
+    @EnvironmentObject var auth: AuthController
     
     var body: some View {
-        TabView {
-            NavigationView {
-                PoolControlsView()
-                    .navigationTitle("Controls")
-            }
-            .tabItem {
-                Image(systemName: "av.remote")
-                Text("Controls")
-            }
-            
-            RemoteDisplayView()
-            .tabItem {
-                Image(systemName: "display")
-                Text("Remote Display")
-            }
-            
-            NavigationStack {
-                MaintenanceView()
-                    .navigationTitle("Maintenance")
-            }
-            .tabItem {
-                Image(systemName: "calendar.badge.checkmark")
-                Text("Maintenance")
-            }
-            
-            NavigationView {
-                DiagnosticsView()
-                    .navigationTitle("Diagnostics")
-            }
-            .badge(badgeValue)
-            .tabItem {
-                Image(systemName: "gearshape")
-                Text("Diagnostics")
+        Group {
+            if authEvent == .signedOut {
+                LoginView()
+            } else {
+                HomeView()
             }
         }
-        .onChange(of: client.aquaLogic) { oldState, newState in
-            isPresented = client.aquaLogic.inServiceMode
+        .task {
+            for await event in supabase.auth.authEventChange {
+                withAnimation {
+                    authEvent = event
+                }
+                
+                auth.session = try? await supabase.auth.session
+            }
         }
-        .fullScreenCover(isPresented: $isPresented, content: ServiceModalView.init)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(AuthController())
             .environmentObject(NetworkManager())
+        
         ContentView()
             .preferredColorScheme(.dark)
+            .environmentObject(AuthController())
             .environmentObject(NetworkManager())
     }
 }

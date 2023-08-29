@@ -1,19 +1,22 @@
 import Foundation
+import SwiftUI
 
 struct CleaningRecord: Codable, Identifiable {
-    let id: Int
-    let timestamp: Date
-    let addedChemicals: Bool
-    let skimmed: Bool
-    let brushed: Bool
-    let skimmerPot: Bool
-    let brushedTiles: Bool
-    let chemicalImageUrl: String?
+    var id: Int?
+    var timestamp: Date?
+    var addedAcid: Bool = false
+    var addedChlorine: Bool = false
+    var skimmed: Bool = false
+    var brushed: Bool = false
+    var skimmerPot: Bool = false
+    var brushedTiles: Bool = false
+    var chemicalImageUrl: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "ID"
         case timestamp = "CleanedOn"
-        case addedChemicals = "AddedChemicals"
+        case addedAcid = "AddedAcid"
+        case addedChlorine = "AddedChlorine"
         case skimmed = "Skimmed"
         case brushed = "Brushed"
         case skimmerPot = "SkimmerPot"

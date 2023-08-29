@@ -1,8 +1,8 @@
 struct InventoryItem: Codable, Identifiable {
-    let id: Int
+    let id: Int?
     let name: String
-    let amount: Double?
-    let needsReplacement: Bool
+    var amount: Double?
+    var needsReplacement: Bool
     let itemType: ItemType
     
     enum CodingKeys: String, CodingKey {
