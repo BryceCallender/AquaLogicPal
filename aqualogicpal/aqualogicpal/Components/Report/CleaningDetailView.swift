@@ -1,106 +1,128 @@
 import SwiftUI
 
 struct CleaningDetailView: View {
-    var cleaningDetail: CleaningRecord
+    @Environment(\.dismiss) private var dismiss
+    
+    @Binding var cleaningDetail: CleaningRecord?
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text(cleaningDetail.timestamp!.formatted(.dateTime.day().month().year()))
-                    .font(.title2.weight(.semibold))
-                
-                if cleaningDetail.chemicalImageUrl != nil {
-                    AsyncImage(url: URL(string: cleaningDetail.chemicalImageUrl!)) { image in
-                        image.resizable()
-                            .scaledToFit()
-                    } placeholder: {
-                        Color.gray.opacity(0.3)
-                    }
-                    .frame(height: 300)
+        if let cleaningDetail {
+            VStack {
+                HStack {
+                    Text(cleaningDetail.timestamp!.formatted(.dateTime.day().month().year()))
+                        .font(.title.weight(.bold))
                     
-                    Divider()
+                    HStack {
+                        Spacer()
+                        Button {
+                            dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
+                                .symbolRenderingMode(.hierarchical)
+                                .font(.title2.weight(.semibold))
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
+                .padding()
                 
-                Text("Actions")
-                    .font(.title2)
+                Divider()
                 
-                LazyVGrid(columns: columns, spacing: 8) {
-                    if cleaningDetail.addedAcid {
-                        Card {
-                            HStack {
-                                Text("Acid")
-                                
-                                HStack {
-                                    Text("pH")
-                                    Image(systemName: "arrow.down")
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        if cleaningDetail.chemicalImageUrl != nil {
+                            AsyncImage(url: URL(string: cleaningDetail.chemicalImageUrl!)) { image in
+                                image.resizable()
+                                    .scaledToFit()
+                            } placeholder: {
+                                Color.gray.opacity(0.3)
+                            }
+                            .frame(height: 300)
+                        }
+                        
+                        Text("Actions")
+                            .font(.title2)
+                        
+                        LazyVGrid(columns: columns, spacing: 8) {
+                            if cleaningDetail.addedAcid {
+                                Card {
+                                    HStack {
+                                        Text("Acid")
+                                        
+                                        HStack {
+                                            Text("pH")
+                                            Image(systemName: "arrow.down")
+                                        }
+                                        .foregroundStyle(.red)
+                                    }
+                                    .padding()
                                 }
-                                .foregroundStyle(.red)
                             }
-                            .padding()
-                        }
-                    }
-                    
-                    if cleaningDetail.addedChlorine {
-                        Card {
-                            HStack {
-                                Text("Chlorine Levels")
-                                
-                                
-                                Image(systemName: "arrow.up")
-                                    .foregroundStyle(.blue)
+                            
+                            if cleaningDetail.addedChlorine {
+                                Card {
+                                    HStack {
+                                        Text("Chlorine Levels")
+                                        
+                                        
+                                        Image(systemName: "arrow.up")
+                                            .foregroundStyle(.blue)
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
-                        }
-                    }
-                    
-                    if cleaningDetail.skimmed {
-                        Card {
-                            HStack {
-                                Text("Skimmed")
+                            
+                            if cleaningDetail.skimmed {
+                                Card {
+                                    HStack {
+                                        Text("Skimmed")
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
-                        }
-                    }
-                    
-                    if cleaningDetail.brushed {
-                        Card {
-                            HStack {
-                                Text("Brushed")
+                            
+                            if cleaningDetail.brushed {
+                                Card {
+                                    HStack {
+                                        Text("Brushed")
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
-                        }
-                    }
-                    
-                    if cleaningDetail.brushedTiles {
-                        Card {
-                            HStack {
-                                Text("Tiles")
+                            
+                            if cleaningDetail.brushedTiles {
+                                Card {
+                                    HStack {
+                                        Text("Tiles")
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
-                        }
-                    }
-                    
-                    if cleaningDetail.skimmerPot {
-                        Card {
-                            HStack {
-                                Text("Emptied Pot")
+                            
+                            if cleaningDetail.skimmerPot {
+                                Card {
+                                    HStack {
+                                        Text("Emptied Pot")
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
                         }
+                        .padding([.leading, .trailing])
+                        
+                        Spacer()
                     }
                 }
-                
-                Spacer()
+                .padding()
             }
+        } else {
+            Text("Empty")
         }
-        .padding()
-        .navigationTitle("Pool Cleaning Report")
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    CleaningDetailView(cleaningDetail: CleaningRecord(id: 1, timestamp: Date.now, addedAcid: true, addedChlorine: false, skimmed: true, brushed: true, skimmerPot: false, brushedTiles: false, chemicalImageUrl: "https://gsbghbhgwcjindroxilf.supabase.co/storage/v1/object/public/chemicals/8:19:2023.jpg"))
+    CleaningDetailView(cleaningDetail: .constant(CleaningRecord(id: 1, timestamp: Date.now, addedAcid: true, addedChlorine: false, skimmed: true, brushed: true, skimmerPot: false, brushedTiles: false, chemicalImageUrl: "https://gsbghbhgwcjindroxilf.supabase.co/storage/v1/object/public/chemicals/8:19:2023.jpg")))
 }

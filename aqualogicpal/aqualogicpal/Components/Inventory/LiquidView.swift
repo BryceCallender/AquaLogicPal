@@ -17,12 +17,14 @@ struct LiquidView: View {
                 AcidContainer(progress: 1.0)
             }
             
-            AcidContainer(progress: leftOverProgress)
+            if fullContainers == 0 || (fullContainers > 1 && leftOverProgress > 0) {
+                AcidContainer(progress: leftOverProgress)
+            }
         }
         .frame(height: 100)
     }
 }
 
 #Preview {
-    LiquidView(amount: 2.5)
+    LiquidView(amount: 2.25)
 }

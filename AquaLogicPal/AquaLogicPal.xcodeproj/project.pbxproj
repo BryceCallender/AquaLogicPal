@@ -31,6 +31,7 @@
 		0266E3092A9C602200048525 /* PoolEventUsageChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E3082A9C602200048525 /* PoolEventUsageChart.swift */; };
 		0266E30B2A9C65B300048525 /* PoolEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E30A2A9C65B300048525 /* PoolEvent.swift */; };
 		0266E30D2A9C65E100048525 /* PoolEventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0266E30C2A9C65E100048525 /* PoolEventType.swift */; };
+		0267375E2AA8160F001AF618 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0267375D2AA8160F001AF618 /* CalendarView.swift */; };
 		0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0272EEF72A428B6A000A70C5 /* PusherSwift */; };
 		0285D7C22A9944CB008D91F7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0285D7C12A9944CB008D91F7 /* ImagePicker.swift */; };
 		0289CC532A47695900C91CFC /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0289CC522A47695900C91CFC /* StatusView.swift */; };
@@ -96,6 +97,7 @@
 		02C862542A7CA266002D77A4 /* TemperaturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C862532A7CA265002D77A4 /* TemperaturesView.swift */; };
 		02D535292A5D0CF200C84EB4 /* PoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C282A5B600400F1C32C /* PoolCardView.swift */; };
 		02D5352A2A5D0CF200C84EB4 /* CustomPoolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB9C2D2A5B619000F1C32C /* CustomPoolCardView.swift */; };
+		02E3602C2AAD10740084F0A4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 02E3602B2AAD10740084F0A4 /* PopupView */; };
 		02E453A32A906306006245AB /* LiquidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E453A22A906306006245AB /* LiquidView.swift */; };
 		02E64EC02A8B13EB0080EACF /* AcidContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E64EBF2A8B13EB0080EACF /* AcidContainer.swift */; };
 		02E64EC22A8B388B0080EACF /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E64EC12A8B388B0080EACF /* ItemType.swift */; };
@@ -103,6 +105,8 @@
 		02E6BBA52A91811100E841AE /* _Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6BBA42A91811100E841AE /* _Secrets.swift */; };
 		02E6BBA72A91915D00E841AE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6BBA62A91915D00E841AE /* HomeView.swift */; };
 		02EF32472A95AC9000DEBBB4 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02EF32462A95AC9000DEBBB4 /* InventoryView.swift */; };
+		02F3EB382AB035DE00A0DAA6 /* SpaActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3EB372AB035DE00A0DAA6 /* SpaActivityWidget.swift */; };
+		02F3EB3A2AB036A300A0DAA6 /* SpaAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F3EB392AB036A300A0DAA6 /* SpaAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,6 +155,7 @@
 		0266E3082A9C602200048525 /* PoolEventUsageChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PoolEventUsageChart.swift; path = AquaLogicPal/Components/Charts/PoolEventUsageChart.swift; sourceTree = SOURCE_ROOT; };
 		0266E30A2A9C65B300048525 /* PoolEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PoolEvent.swift; path = AquaLogicPal/Models/PoolEvent.swift; sourceTree = SOURCE_ROOT; };
 		0266E30C2A9C65E100048525 /* PoolEventType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PoolEventType.swift; path = AquaLogicPal/Models/PoolEventType.swift; sourceTree = SOURCE_ROOT; };
+		0267375D2AA8160F001AF618 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarView.swift; path = AquaLogicPal/Components/Report/CalendarView.swift; sourceTree = SOURCE_ROOT; };
 		0285D7C12A9944CB008D91F7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ImagePicker.swift; path = AquaLogicPal/Components/Report/ImagePicker.swift; sourceTree = SOURCE_ROOT; };
 		0289CC522A47695900C91CFC /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		0289CC542A476CEF00C91CFC /* BlinkViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkViewModifier.swift; sourceTree = "<group>"; };
@@ -213,6 +218,8 @@
 		02E6BBA42A91811100E841AE /* _Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = _Secrets.swift; path = AquaLogicPal/Models/_Secrets.swift; sourceTree = SOURCE_ROOT; };
 		02E6BBA62A91915D00E841AE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = AquaLogicPal/HomeView.swift; sourceTree = SOURCE_ROOT; };
 		02EF32462A95AC9000DEBBB4 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InventoryView.swift; path = aqualogicpal/InventoryView.swift; sourceTree = SOURCE_ROOT; };
+		02F3EB372AB035DE00A0DAA6 /* SpaActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpaActivityWidget.swift; path = AquaLogicPal/SpaActivityWidget.swift; sourceTree = SOURCE_ROOT; };
+		02F3EB392AB036A300A0DAA6 /* SpaAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpaAttributes.swift; path = AquaLogicPal/SpaAttributes.swift; sourceTree = SOURCE_ROOT; };
 		79E61A3340CD3B5B425ADD77 /* Pods_aqualogicminipal_Watch_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicminipal_Watch_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F464AEB6CADEB3C4ABFC2EE6 /* Pods_aqualogicpal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aqualogicpal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,6 +237,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02E3602C2AAD10740084F0A4 /* PopupView in Frameworks */,
 				022AECDF2A834731003FE79F /* Supabase in Frameworks */,
 				02B4155F2A4F6F9600BEE718 /* Alamofire in Frameworks */,
 				0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */,
@@ -324,6 +332,8 @@
 				02A692792A3E661200F88EBE /* Assets.xcassets */,
 				02C6B5022A3FA6DA009AF3F2 /* GoogleService-Info.plist */,
 				02A6927B2A3E661200F88EBE /* Preview Content */,
+				02F3EB372AB035DE00A0DAA6 /* SpaActivityWidget.swift */,
+				02F3EB392AB036A300A0DAA6 /* SpaAttributes.swift */,
 			);
 			path = aqualogicpal;
 			sourceTree = "<group>";
@@ -357,6 +367,7 @@
 				0209B40E2A92E0E000C2899A /* Checkbox.swift */,
 				0285D7C12A9944CB008D91F7 /* ImagePicker.swift */,
 				028D68F82A9A8AE500AC996E /* FilterCartridgesView.swift */,
+				0267375D2AA8160F001AF618 /* CalendarView.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -496,6 +507,7 @@
 				025572832A61191E00854441 /* Liquid */,
 				022AECDE2A834731003FE79F /* Supabase */,
 				02167FBD2A95C7E400DFD01A /* AlertToast */,
+				02E3602B2AAD10740084F0A4 /* PopupView */,
 			);
 			productName = aqualogicpal;
 			productReference = 02A692722A3E661100F88EBE /* aqualogicpal.app */;
@@ -534,6 +546,7 @@
 				025572822A61191E00854441 /* XCRemoteSwiftPackageReference "liquid" */,
 				022AECDD2A834731003FE79F /* XCRemoteSwiftPackageReference "supabase-swift" */,
 				02167FBC2A95C7E300DFD01A /* XCRemoteSwiftPackageReference "AlertToast" */,
+				02E3602A2AAD10740084F0A4 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 02A692732A3E661100F88EBE /* Products */;
 			projectDirPath = "";
@@ -641,6 +654,7 @@
 				02C6B5132A3FF7F9009AF3F2 /* Display.swift in Sources */,
 				022823012A4BE9FD00ABC0C5 /* LoginView.swift in Sources */,
 				02E64EC02A8B13EB0080EACF /* AcidContainer.swift in Sources */,
+				02F3EB3A2AB036A300A0DAA6 /* SpaAttributes.swift in Sources */,
 				024EA8B22A897D450009EEB0 /* InventoryItem.swift in Sources */,
 				02C6B50A2A3FAAD1009AF3F2 /* RemoteDisplayView.swift in Sources */,
 				02A3D6222A4122370046CD4F /* ScreenView.swift in Sources */,
@@ -650,6 +664,7 @@
 				024EA8B72A898D1A0009EEB0 /* InventoryDetail.swift in Sources */,
 				02B415562A4F3F1400BEE718 /* Extensions.swift in Sources */,
 				024F97592A9D828E002FE17E /* PoolEvents.swift in Sources */,
+				0267375E2AA8160F001AF618 /* CalendarView.swift in Sources */,
 				0289CC612A47A7B900C91CFC /* ChlorinationGaugeView.swift in Sources */,
 				028D69022A9AFA6600AC996E /* Constants.swift in Sources */,
 				02AF00622A97256E0043C100 /* AddItemSheetView.swift in Sources */,
@@ -661,6 +676,7 @@
 				02A3D6112A40C9AA0046CD4F /* ImageView.swift in Sources */,
 				0266E30D2A9C65E100048525 /* PoolEventType.swift in Sources */,
 				0289CC592A479A1F00C91CFC /* SpaData.swift in Sources */,
+				02F3EB382AB035DE00A0DAA6 /* SpaActivityWidget.swift in Sources */,
 				02BF2AFD2A538DF1002437D1 /* AnimationDetails.swift in Sources */,
 				02C6B5192A4003E2009AF3F2 /* PoolState.swift in Sources */,
 			);
@@ -1004,6 +1020,14 @@
 				minimumVersion = 5.7.0;
 			};
 		};
+		02E3602A2AAD10740084F0A4 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1036,6 +1060,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		02E3602B2AAD10740084F0A4 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 02E3602A2AAD10740084F0A4 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

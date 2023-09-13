@@ -43,11 +43,32 @@ struct FilterCartridgesView: View {
     }
     
     private var filterCapsuleHeader: some View {
-        VStack(alignment: .leading) {
-            Text("Filter Catridges")
-                .font(.system(.title, design: .rounded))
+        VStack(alignment: .leading, spacing: 8) {
+            HStack {
+                Text("Filter Catridges")
+                    .font(.system(.title, design: .rounded))
+                
+                Spacer()
+                
+                Button {
+                    print("Edit button was tapped")
+                } label: {
+                    Image(systemName: "checkmark.circle")
+                        .font(.title)
+                }
+                .buttonStyle(.plain)
+            }
             
-            Text("Last Cleaned: ") + (filterRecord != nil ? Text(filterRecord!.cleanedOn, format: .dateTime.year().month()) : Text("Unknown"))
+            HStack {
+                Text("Last Cleaned:")
+                
+                if let filterRecord = filterRecord {
+                    Text(filterRecord.cleanedOn, format: .dateTime.year().month())
+                } else {
+                    ProgressView()
+                }
+            }
+            .frame(height: 10)
         }
     }
 }

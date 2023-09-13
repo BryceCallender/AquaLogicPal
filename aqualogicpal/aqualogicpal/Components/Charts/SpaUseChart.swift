@@ -26,8 +26,11 @@ struct SpaUseChart: View {
     let gradient = LinearGradient(
         gradient: Gradient(
             colors: [
-                .blue,
-                .green,
+                .init(hex: "#993BF5")!,
+                //.init(hex: "#0649A5")!,
+                .init(hex: "#41ADF5")!,
+                .init(hex: "#05D1D8")!,
+                .init(hex: "#05D888")!,
             ]
         ),
         startPoint: .bottom,

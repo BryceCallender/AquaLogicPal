@@ -1,15 +1,11 @@
 import Foundation
 import Alamofire
+import SwiftUI
 
-class NetworkManager: ObservableObject {
+@Observable class NetworkManager {
     static let domain: String = "aqualogicpal.com"
     static let port: Int = 5002
     static let baseUrl: String = "https://\(domain):\(port)"
-
-    // dashboard information
-    static let dashboardEndpoint = "/api/dashboard"
-    static let saltLevelEndpoint = "\(dashboardEndpoint)/salt-levels"
-    static let spaEventsEndpoint = "\(dashboardEndpoint)/spa-events"
 
     // aqualogic specific endpoints
     static let aquaLogicApiGroup = "/api/aqualogic"

@@ -2,17 +2,10 @@ import SwiftUI
 import Charts
 
 struct PoolEventUsageChart: View {
-    var isOverview: Bool
+    @Environment(AquaLogicPalStore.self) private var store
     
     @State private var barWidth = 7.0
-    
-    @State private var data: [PoolEvents] = [
-        .init(name: PoolEventType.filter.rawValue, total: 323),
-        .init(name: PoolEventType.lights.rawValue, total: 90),
-        .init(name: PoolEventType.heater.rawValue, total: 83),
-        .init(name: PoolEventType.waterfall.rawValue, total: 40)
-    ]
-    
+    var isOverview: Bool
     
     var body: some View {
         if isOverview {
@@ -28,7 +21,7 @@ struct PoolEventUsageChart: View {
     }
     
     private var chart: some View {
-        Chart(data, id: \.name) { dataPoint in
+        Chart(store.poolData, id: \.name) { dataPoint in
             SectorMark(
                 angle: .value("Event", dataPoint.total),
                 innerRadius: .ratio(0.618),
@@ -36,7 +29,7 @@ struct PoolEventUsageChart: View {
             )
             .cornerRadius(10)
             .if(isOverview) { chartContent in
-                chartContent.foregroundStyle(.dragoonBlue.gradient)
+                chartContent.foregroundStyle(AngularGradient(colors: [.dragoonBlue], center: .center, startAngle: .zero, endAngle: .degrees(360)))
             }
             .if(!isOverview) { chartContent in
                 chartContent
@@ -51,7 +44,6 @@ struct PoolEventUsageChart: View {
             .accessibilityValue("\(dataPoint.total) times")
             .accessibilityHidden(isOverview)
         }
-        //.accessibilityChartDescriptor(self)
         .if (!isOverview) { view in
             view.chartBackground { chartProxy in
                 GeometryReader { geometry in
@@ -60,7 +52,7 @@ struct PoolEventUsageChart: View {
                         Text("Most Used Event")
                             .font(.callout)
                             .foregroundStyle(.secondary)
-                        Text("Filter")
+                        Text(store.mostUsedPoolEvent ?? "")
                             .font(.title2.bold())
                             .foregroundColor(.primary)
                     }
@@ -71,20 +63,17 @@ struct PoolEventUsageChart: View {
         .chartXAxis(isOverview ? .hidden : .automatic)
         .chartYAxis(isOverview ? .hidden : .automatic)
         .frame(height: isOverview ? Constants.previewChartHeight : Constants.detailChartHeight)
+        .task {
+            await store.getPoolEvents()
+        }
     }
 }
-
-// MARK: - Accessibility
-
-//extension SpaUseChart: AXChartDescriptorRepresentable {
-//    func makeChartDescriptor() -> AXChartDescriptor {
-//        AccessibilityHelpers.chartDescriptor(forSalesSeries: data)
-//    }
-//}
 
 struct PoolEventUsageChart_Previews: PreviewProvider {
     static var previews: some View {
         PoolEventUsageChart(isOverview: true)
+            .environment(AquaLogicPalStore())
         PoolEventUsageChart(isOverview: false)
+            .environment(AquaLogicPalStore())
     }
 }

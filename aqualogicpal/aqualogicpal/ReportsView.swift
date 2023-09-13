@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ReportsView: View {
-    @State private var cleaningRecords = [CleaningRecord]()
-    @State private var showSheet = false
+    @Environment(AquaLogicPalStore.self) private var store
+    @State private var showAddReportSheet = false
+    @State private var showSelectedReportSheet = false
+    @State private var selectedCleaningRecord: CleaningRecord?
     
     var body: some View {
         List {
@@ -10,12 +12,19 @@ struct ReportsView: View {
                 FilterCartridgesView()
             }
             
+//            Section(header: Text("Cleaning Records")) {
+//                ForEach(store.cleaningRecords) { record in
+//                    NavigationLink(destination: CleaningDetailView(cleaningDetail: record)) {
+//                        CleaningRow(cleaningDetail: record)
+//                    }
+//                }
+//            }
             Section(header: Text("Cleaning Records")) {
-                ForEach(cleaningRecords) { record in
-                    NavigationLink(destination: CleaningDetailView(cleaningDetail: record)) {
-                        CleaningRow(cleaningDetail: record)
-                    }
-                }
+                CalendarView(
+                    interval: DateInterval(start: .distantPast, end: .distantFuture),
+                    cleaningRecord: $selectedCleaningRecord,
+                    showSheet: $showSelectedReportSheet
+                )
             }
         }
         .task {
@@ -23,29 +32,28 @@ struct ReportsView: View {
         }
         .toolbar {
             Button(action: {
-                showSheet = true
+                showAddReportSheet = true
             }, label: {
                 Image(systemName: "plus")
             })
         }
-        .sheet(isPresented: $showSheet) {
+        .sheet(isPresented: $showAddReportSheet) {
             PoolCleaningCheckListView()
+        }
+        .sheet(isPresented: $showSelectedReportSheet) {
+            CleaningDetailView(cleaningDetail: $selectedCleaningRecord)
+                .presentationDetents([.large])
         }
     }
     
     
     
     func loadCleaningRecords() async {
-        do {
-            let cleaningQuery = supabase.database.from("Cleaning").select().order(column: "CleanedOn", ascending: false)
-            cleaningRecords = try await cleaningQuery.execute().value
-        } catch {
-            cleaningRecords = []
-            print("### Loading Cleaning Records Error: \(error)")
-        }
+        await store.getCleaningRecords()
     }
 }
 
 #Preview {
     ReportsView()
+        .environment(AquaLogicPalStore())
 }

@@ -3,15 +3,19 @@ import Supabase
 
 @main
 struct AquaLogicPalApp: App {
+    @State private var store = AquaLogicPalStore()
+    @State private var auth = AuthController()
+    @State private var networkManager = NetworkManager()
+
     @State var supabaseInitialized = false
-    @StateObject var auth = AuthController()
     
     var body: some Scene {
         WindowGroup {
             if supabaseInitialized {
                 ContentView()
-                    .environmentObject(auth)
-                    .environmentObject(NetworkManager())
+                    .environment(auth)
+                    .environment(networkManager)
+                    .environment(store)
             } else {
               ProgressView()
                 .task {

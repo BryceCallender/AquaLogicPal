@@ -42,7 +42,7 @@ struct InventoryDetail: View {
                     AsyncButton {
                         await markForReplacement()
                     } label: {
-                        Text("Needs Replacement")
+                        Text(item.needsReplacement ? "Mark Replaced" : "Needs Replacement")
                             .frame(maxWidth: .infinity)
                     }
                 }
@@ -51,8 +51,10 @@ struct InventoryDetail: View {
             .buttonStyle(.borderedProminent)
         }
         .padding()
-        .toolbar {
-            EditButton()
+        .if(item.itemType == .liquid) { view in
+            view.toolbar {
+                EditButton()
+            }
         }
         .onAppear {
             newAmount = item.amount ?? 0
@@ -65,11 +67,11 @@ struct InventoryDetail: View {
                 }
             }
         }
-        .toast(isPresenting: $showToast, duration: 1.0) {
+        .toast(isPresenting: $showToast) {
             if error != nil {
-                AlertToast(displayMode: .banner(.pop), type: .error(.red), title: "Error!", subTitle: error?.localizedDescription)
+                AlertToast(displayMode: .hud, type: .error(.red), title: "Error!", subTitle: error?.localizedDescription)
             } else {
-                AlertToast(displayMode: .banner(.pop), type: .complete(.green), title: "Saved!")
+                AlertToast(displayMode: .hud, type: .complete(.green), title: "Saved!")
             }
         }
     }
@@ -84,10 +86,10 @@ struct InventoryDetail: View {
     }
     
     func markForReplacement() async {
-        
+        showToast = true
     }
 }
 
 #Preview {
-    InventoryDetail(item: InventoryItem(id: 1, name: "Muriatic Acid", amount: 2.25, needsReplacement: false, itemType: .liquid))
+    InventoryDetail(item: InventoryItem(id: 1, name: "Muriatic Acid", amount: 2.25, needsReplacement: true, itemType: .physical))
 }

@@ -2,8 +2,10 @@ import SwiftUI
 import GoTrue
 
 struct ContentView: View {
+    @Environment(AuthController.self) private var auth
+    
     @State var authEvent: AuthChangeEvent?
-    @EnvironmentObject var auth: AuthController
+    
     
     var body: some View {
         Group {
@@ -28,12 +30,14 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(AuthController())
-            .environmentObject(NetworkManager())
+            .environment(AuthController())
+            .environment(NetworkManager())
+            .environment(AquaLogicPalStore())
         
         ContentView()
             .preferredColorScheme(.dark)
-            .environmentObject(AuthController())
-            .environmentObject(NetworkManager())
+            .environment(AuthController())
+            .environment(NetworkManager())
+            .environment(AquaLogicPalStore())
     }
 }

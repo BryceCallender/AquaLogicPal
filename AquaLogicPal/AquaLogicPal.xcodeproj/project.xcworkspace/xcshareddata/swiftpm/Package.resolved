@@ -82,6 +82,15 @@
       }
     },
     {
+      "identity" : "popupview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/exyte/PopupView.git",
+      "state" : {
+        "revision" : "5724e89ce2e81f79ccfc1fabaaf5c42473234aef",
+        "version" : "2.6.3"
+      }
+    },
+    {
       "identity" : "postgrest-swift",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/supabase-community/postgrest-swift",

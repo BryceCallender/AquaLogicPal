@@ -29,16 +29,29 @@ struct SaltLevelRangeChart: View {
     
     @State private var barWidth = 10.0
     
-    var selectedData: SaltData? {
+    var selectedDateValue: (date: Date, salt: Double)? {
         if rawSelectedDate == nil {
             return nil
         }
         
         if let saltData = data.first(where: { Calendar.current.isDate($0.eventTime, equalTo: rawSelectedDate!, toGranularity: .month) }) {
-            return saltData
+            var newComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: saltData.eventTime)
+            
+            newComponents.day = 15
+            let newDate = Calendar.current.date(from: newComponents) ?? Date.now
+            
+            return (newDate, saltData.salt)
         }
         
         return nil
+    }
+    
+    var min: Double? {
+        return data.min()?.salt
+    }
+    
+    var max: Double? {
+        return data.max()?.salt
     }
     
     var body: some View {
@@ -60,15 +73,15 @@ struct SaltLevelRangeChart: View {
                 BarMark(
                     x: .value("Month", dataPoint.eventTime, unit: .month),
                     yStart: .value("PPM Min", dataPoint.salt),
-                    yEnd: .value("PPM Max", dataPoint.salt + Double.random(in: 0..<500)),
+                    yEnd: .value("PPM Max", dataPoint.salt),
                     width: .fixed(isOverview ? 8 : barWidth)
                 )
                 .clipShape(.capsule)
                 .foregroundStyle(.dragoonBlue.gradient)
                 
-                if let selectedData {
+                if let selectedDateValue {
                     RuleMark(
-                        x: .value("Selected", selectedData.eventTime, unit: .day)
+                        x: .value("Selected", selectedDateValue.date, unit: .day)
                     )
                     .foregroundStyle(.gray.opacity(0.3))
                     .offset(yStart: -10)
@@ -98,6 +111,9 @@ struct SaltLevelRangeChart: View {
             view.chartXSelection(value: $rawSelectedDate)
         }
         //.accessibilityChartDescriptor(self)
+        .if (min != nil && max != nil) { view in
+            view.chartYScale(domain: min!...max!)
+        }
         .chartYAxis(isOverview ? .hidden : .automatic)
         .chartXAxis(isOverview ? .hidden : .automatic)
         .frame(height: isOverview ? Constants.previewChartHeight : Constants.detailChartHeight)
@@ -111,12 +127,9 @@ struct SaltLevelRangeChart: View {
                 .font(.system(.title, design: .rounded))
                 .foregroundColor(.primary)
             + Text("PPM")
-            
-            //            Text("\(HeartRateData.dateInterval), ") + Text(HeartRateData.latestDate, format: .dateTime.year())
-            
         }
         .fontWeight(.semibold)
-        .opacity(selectedData == nil ? 1 : 0)
+        .opacity(selectedDateValue == nil ? 1 : 0)
     }
     
     @ViewBuilder
@@ -127,7 +140,7 @@ struct SaltLevelRangeChart: View {
                 .foregroundStyle(.gray)
             
             HStack(spacing: 4) {
-                Text("\(Int(selectedData!.salt))")
+                Text("\(Int(selectedDateValue!.salt))")
                     .font(.title3)
                     .fontWeight(.semibold)
                 
@@ -141,50 +154,6 @@ struct SaltLevelRangeChart: View {
         .background(Color.gray.opacity(0.3), in: .rect(cornerRadius: 10))
     }
 }
-
-// MARK: - Accessibility
-
-//extension HeartRateRangeChart: AXChartDescriptorRepresentable {
-//    func makeChartDescriptor() -> AXChartDescriptor {
-//        
-//        let dateStringConverter: ((Date) -> (String)) = { date in
-//            date.formatted(date: .complete, time: .omitted)
-//        }
-//        
-//        let min = data.map(\.dailyMin).min() ?? 0
-//        let max = data.map(\.dailyMax).max() ?? 0
-//        
-//        let xAxis = AXCategoricalDataAxisDescriptor(
-//            title: "Day",
-//            categoryOrder: data.map { dateStringConverter($0.weekday) }
-//        )
-//
-//        let yAxis = AXNumericDataAxisDescriptor(
-//            title: "Heart Rate",
-//            range: Double(min)...Double(max),
-//            gridlinePositions: []
-//        ) { value in "Average: \(Int(value)) BPM" }
-//
-//        let series = AXDataSeriesDescriptor(
-//            name: "Last Week",
-//            isContinuous: false,
-//            dataPoints: data.map {
-//                .init(x: dateStringConverter($0.weekday),
-//                      y: Double($0.dailyAverage),
-//                      label: "Min: \($0.dailyMin) BPM, Max: \($0.dailyMax) BPM")
-//            }
-//        )
-//
-//        return AXChartDescriptor(
-//            title: "Heart Rate range",
-//            summary: nil,
-//            xAxis: xAxis,
-//            yAxis: yAxis,
-//            additionalAxes: [],
-//            series: [series]
-//        )
-//    }
-//}
 
 struct SaltLevelRangeChart_Previews: PreviewProvider {
     static var previews: some View {
