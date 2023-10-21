@@ -1,25 +1,33 @@
 import SwiftUI
-import FirebaseCore
-import FirebaseAuth
-
-class AppDelegate: NSObject, UIApplicationDelegate {
-  func application(_ application: UIApplication,
-                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-    FirebaseApp.configure()
-    return true
-  }
-}
+import Supabase
 
 @main
 struct AquaLogicPalApp: App {
-    // register app delegate for Firebase setup
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @State private var store = AquaLogicPalStore()
+    @State private var auth = AuthController()
+    @State private var networkManager = NetworkManager()
+
+    @State var supabaseInitialized = false
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environmentObject(AuthViewModel())
-                .environmentObject(NetworkManager())
+            if supabaseInitialized {
+                ContentView()
+                    .environment(auth)
+                    .environment(networkManager)
+                    .environment(store)
+            } else {
+              ProgressView()
+                .task {
+                  await supabase.auth.initialize()
+                  supabaseInitialized = true
+                }
+            }
         }
     }
 }
+
+let supabase = SupabaseClient(
+  supabaseURL: Secrets.supabaseURL,
+  supabaseKey: Secrets.supabaseAnonKey
+)

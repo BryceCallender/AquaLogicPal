@@ -9,26 +9,24 @@ struct TemperatureCardView: View {
     var isMetric: Bool
     
     var body: some View {
-        ZStack {
-            HStack {
-                Image(systemName: temperatureToIcon())
-                    .symbolRenderingMode(.hierarchical)
-                    .font(.system(size: 60))
+        VStack(alignment: .center) {
+            Image(systemName: temperatureToIcon())
+                .symbolRenderingMode(.hierarchical)
+                .font(.system(size: 50))
 
-                GeometryReader{ g in
-                    VStack(alignment: .center) {
-                        Text(label)
-                            .font(.title2)
-                        
-                        Text(temperatureToLabel())
-                            .font(.title3)
-                    }
-                    .padding()
+            GeometryReader { g in
+                VStack(alignment: .center) {
+                    Text(label)
+                        .font(.system(size: 12))
+                    
+                    Text(temperatureToLabel())
+                        .font(.system(size: 10))
                 }
+                .padding()
             }
-            .padding(20)
-            .multilineTextAlignment(.center)
         }
+        .padding(20)
+        .multilineTextAlignment(.center)
     }
     
     func temperatureToIcon() -> String {

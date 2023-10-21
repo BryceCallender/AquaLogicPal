@@ -2,8 +2,10 @@ import SwiftUI
 
 struct RemoteDisplayView: View {
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Spacer()
             ScreenView()
+            Spacer()
             
             Grid {
                 GridRow {
@@ -22,12 +24,8 @@ struct RemoteDisplayView: View {
                     Spacer()
                 }
             }
-            .padding(.bottom)
+            .padding([.bottom, .leading, .trailing])
         }
-    }
-    
-    func nothing() -> Void {
-        
     }
 }
 

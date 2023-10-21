@@ -1,11 +1,15 @@
 import Foundation
 
-struct SpaData: Codable, Identifiable {
-    var eventTime: Date
-    var count: Int
+struct SpaData: Identifiable, Comparable {
     var id = UUID()
+    var count: Int
+    var eventTime: Date
     
-    enum CodingKeys:String,CodingKey {
-        case eventTime, count
+    static func ==(lhs: SpaData, rhs: SpaData) -> Bool {
+        return lhs.count == rhs.count
+    }
+
+    static func <(lhs: SpaData, rhs: SpaData) -> Bool {
+        return lhs.count < rhs.count
     }
 }

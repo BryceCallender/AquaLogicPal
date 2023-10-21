@@ -1,15 +1,11 @@
 import Foundation
 import Alamofire
+import SwiftUI
 
-class NetworkManager: ObservableObject {
-    static let ip: String = "192.168.86.52"
+@Observable class NetworkManager {
+    static let domain: String = "aqualogicpal.com"
     static let port: Int = 5002
-    static let baseUrl: String = "https://\(ip):\(port)"
-
-    // dashboard information
-    static let dashboardEndpoint = "/api/dashboard"
-    static let saltLevelEndpoint = "\(dashboardEndpoint)/salt-levels"
-    static let spaEventsEndpoint = "\(dashboardEndpoint)/spa-events"
+    static let baseUrl: String = "https://\(domain):\(port)"
 
     // aqualogic specific endpoints
     static let aquaLogicApiGroup = "/api/aqualogic"
@@ -17,20 +13,16 @@ class NetworkManager: ObservableObject {
     static let sendKeyEndpoint = "\(aquaLogicApiGroup)/key"
     static let setStateEndpoint = "\(aquaLogicApiGroup)/setstate"
     
-    private let session: Session = {
-        let manager = ServerTrustManager(evaluators: [ "\(ip)": DisabledTrustEvaluator()])
-        let configuration = URLSessionConfiguration.af.default
-        return Session(configuration: configuration, serverTrustManager: manager)
-    }()
-    
     func get<T: Decodable>(type: T.Type, route: String, completion: @escaping (_ data: T?) -> Void) async throws {
         let endpoint = "\(NetworkManager.baseUrl)\(route)"
+        print(endpoint)
         
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromPascalCase
         decoder.dateDecodingStrategy = .customISO8601
         
-        session.request(endpoint).responseDecodable(of: T.self, decoder: decoder) { response in
+        AF.request(endpoint).responseDecodable(of: T.self, decoder: decoder) { response in
+            print(response)
             switch response.result {
                 case .success(let value):
                     completion(value)

@@ -1,52 +1,42 @@
 import SwiftUI
+import GoTrue
 
 struct ContentView: View {
-    @EnvironmentObject private var authModel: AuthViewModel
-    @StateObject var client = AquaLogicClient.shared
-    @State private var isPresented = false
+    @Environment(AuthController.self) private var auth
     
-    var badgeValue: String? {
-        if !(client.aquaLogic?.isOk ?? true) {
-            return "!"
-        }
-        
-        return nil
-    }
+    @State var authEvent: AuthChangeEvent?
     
     var body: some View {
-        TabView {
-            PoolControlsView()
-                .tabItem {
-                    Image(systemName: "av.remote")
-                    Text("Controls")
-                }
-            
-            RemoteDisplayView()
-                .tabItem {
-                    Image(systemName: "display")
-                    Text("Remote Display")
-                }
-            
-            DiagnosticsView()
-                .badge(badgeValue)
-                .tabItem {
-                    Image(systemName: "gearshape")
-                    Text("Diagnostics")
-                }
+        Group {
+            if authEvent == .signedOut {
+                LoginView()
+            } else {
+                HomeView()
+            }
         }
-        .onChange(of: client.aquaLogic, perform: { newValue in
-            isPresented = client.aquaLogic.inServiceMode
-        })
-        .fullScreenCover(isPresented: $isPresented, content: ServiceModalView.init)
+        .task {
+            for await event in supabase.auth.authEventChange {
+                withAnimation {
+                    authEvent = event
+                }
+                
+                auth.session = try? await supabase.auth.session
+            }
+        }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(NetworkManager())
-        ContentView()
-            .preferredColorScheme(.dark)
-            .environmentObject(NetworkManager())
-    }
+#Preview {
+    ContentView()
+        .environment(AuthController())
+        .environment(NetworkManager())
+        .environment(AquaLogicPalStore())
+}
+
+#Preview {
+    ContentView()
+        .preferredColorScheme(.dark)
+        .environment(AuthController())
+        .environment(NetworkManager())
+        .environment(AquaLogicPalStore())
 }

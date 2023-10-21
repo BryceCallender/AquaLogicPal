@@ -6,7 +6,7 @@ struct CustomPoolCardView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 10, style: .continuous)
-                .fill(poolCard.isEnabled ? Color.dragoonBlue : Color.cardBackground)
+                .fill(poolCard.isEnabled ? .dragoonBlue : .cardBackground)
                 .shadow(radius: 10)
             
             VStack {

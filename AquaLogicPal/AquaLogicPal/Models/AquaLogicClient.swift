@@ -1,23 +1,29 @@
 import Foundation
 import PusherSwift
 
-class AquaLogicClient : NSObject, ObservableObject {
+
+@Observable class AquaLogicClient : NSObject, ObservableObject {
     static let shared = AquaLogicClient()
     
+    var isConnecting: Bool
     var pusher: Pusher!
     var channel: PusherChannel!
     
-    @Published var aquaLogic: AquaLogic!
+    var aquaLogic: AquaLogic!
+    var pusherService = AquaLogicPusherDelegate()
     
     override init() {
+        isConnecting = false
         super.init()
 
         let options = PusherClientOptions(
           host: .cluster("us3")
         )
         
-        pusher = Pusher(key: "5df799c903bc4dd50a6c", options: options)
+        isConnecting = true
+        pusher = Pusher(key: Secrets.pusherKey, options: options)
         pusher.connect()
+        pusher.connection.delegate = pusherService
     }
     
     func subscribe(channelName: String) {
@@ -60,4 +66,31 @@ class AquaLogicClient : NSObject, ObservableObject {
     func hasFlashingState(state: PoolState) -> Bool {
         return aquaLogic?.hasFlashingState(state: state) ?? false
     }
+}
+
+class AquaLogicPusherDelegate: PusherDelegate {
+    func changedConnectionState(from old: ConnectionState, to new: ConnectionState) {
+        AquaLogicClient.shared.isConnecting = false
+    }
+
+    func debugLog(message: String) {
+        // ...
+    }
+
+    func subscribedToChannel(name: String) {
+        // ...
+    }
+
+    func failedToSubscribeToChannel(name: String, response: URLResponse?, data: String?, error: NSError?) {
+        // ...
+    }
+
+    func receivedError(error: PusherError) {
+        // ...
+    }
+
+    func failedToDecryptEvent(eventName: String, channelName: String, data: String?) {
+        // ...
+    }
+
 }

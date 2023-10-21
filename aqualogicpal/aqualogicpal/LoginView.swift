@@ -1,19 +1,24 @@
 import SwiftUI
-import Firebase
 import Liquid
 
 struct LoginView: View {
+    enum Field: Hashable {
+        case username, password
+    }
+    
     @State var email = ""
     @State var password = ""
-
+    @State var error: Error?
+    
+    @FocusState private var focusedField: Field?
+    
     var body: some View {
         ZStack {
             BackgroundView()
             
             VStack {
-                Text("AquaLogic Pal")
-                    .font(.largeTitle)
-                    .bold()
+                Text("AquaLogicPal")
+                    .font(.system(size: 42).weight(.bold))
                     .foregroundColor(.white)
                     .shadow(radius: 10.0)
                     .padding()
@@ -26,22 +31,38 @@ struct LoginView: View {
                     .padding(.bottom)
                 
                 VStack(alignment: .leading, spacing: 16) {
-                  TextField("Email", text: $email)
+                    TextField("Email", text: $email)
                         .padding()
-                        .background(.white)
+                        .background(.cardBackground)
                         .cornerRadius(10.0)
                         .shadow(radius: 10.0)
                         .keyboardType(.emailAddress)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        .focused($focusedField, equals: .username)
                     
-                  SecureField("Password", text: $password)
+                    SecureField("Password", text: $password)
                         .padding()
-                        .background(.white)
+                        .background(.cardBackground)
                         .cornerRadius(10.0)
                         .shadow(radius: 10.0)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.never)
+                        .focused($focusedField, equals: .password)
                     
-                }.padding([.leading, .trailing, .bottom], 24)
+                }
+                .padding([.horizontal, .bottom], 24)
+                .onSubmit {
+                    if focusedField == .username {
+                        focusedField = .password
+                    } else {
+                        focusedField = nil
+                    }
+                }
                 
-                Button(action: login) {
+                AsyncButton {
+                    await login()
+                } label: {
                     Text("Sign In")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -50,17 +71,25 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
-                .padding([.leading, .trailing], 24)
+                .padding([.horizontal], 24)
+                
+                if let error {
+                    Text(error.localizedDescription)
+                        .foregroundColor(.red)
+                        .font(.footnote)
+                }
             }
         }
     }
-
-    func login() {
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                print(error?.localizedDescription ?? "")
-            } else {
-                print("success")
+    
+    func login() async {
+        do {
+            try await supabase.auth.signIn(email: email, password: password)
+            let session = try await supabase.auth.session
+            print("### Session Info: \(session)")
+        } catch {
+            withAnimation {
+                self.error = error
             }
         }
     }
@@ -69,5 +98,8 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+        
+        LoginView()
+            .preferredColorScheme(.dark)
     }
 }

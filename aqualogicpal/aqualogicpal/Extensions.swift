@@ -1,12 +1,6 @@
 import Foundation
 import SwiftUI
-
-extension Color {
-    static let cardBackground = Color("CardBackground")
-    static let dragoonBlue = Color("DragoonBlue")
-    static let cardTextEnabled = Color("CardTextEnabled")
-    static let cardTextDisabled = Color("CardTextDisabled")
-}
+import Charts
 
 extension Formatter {
     static let iso8601withFractionalSeconds: ISO8601DateFormatter = {
@@ -32,5 +26,111 @@ extension JSONDecoder.DateDecodingStrategy {
         }
         
         throw DecodingError.dataCorruptedError(in: container, debugDescription: "Invalid date: \(string)")
+    }
+}
+
+extension View {
+    @ViewBuilder func `if`<Content: View>(_ condition: Bool, transform: (Self) -> Content) -> some View {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
+
+extension ChartContent {
+    /// Applies the given transform if the given condition evaluates to `true`.
+    /// - Parameters:
+    ///   - condition: The condition to evaluate.
+    ///   - transform: The transform to apply to the source `View`.
+    /// - Returns: Either the original `ChartContent` or the modified `ChartContent` if the condition is `true`.
+    @ChartContentBuilder func `if`<Content: ChartContent>(_ condition: Bool, transform: (Self) -> Content) -> some ChartContent {
+        if condition {
+            transform(self)
+        } else {
+            self
+        }
+    }
+}
+
+extension Date {
+    func toDateComponents() -> DateComponents {
+        var dateComponents = Calendar.current.dateComponents(
+            [.month,
+             .day,
+             .year,
+             .hour,
+             .minute],
+            from: self)
+        dateComponents.timeZone = TimeZone.current
+        dateComponents.calendar = Calendar(identifier: .gregorian)
+        return dateComponents
+    }
+    
+    var month: Int {
+        return Calendar.current.component(.month, from: self)
+    }
+    
+    var year: Int {
+        return Calendar.current.component(.year, from: self)
+    }
+    
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    
+    func endOfMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+    }
+    
+    func startOfYear() -> Date {
+        var dateComponents = DateComponents()
+        dateComponents.year = self.year
+        dateComponents.month = 1
+        dateComponents.day = 1
+        
+        // Create date from components
+        let userCalendar = Calendar.current
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: userCalendar.date(from: dateComponents)!))!
+    }
+    
+    func endOfYear() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(year: 1, day: -1), to: self.startOfYear())!
+    }
+}
+
+extension Color {
+    init?(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+
+        var red: Double = 0.0
+        var green: Double = 0.0
+        var blue: Double = 0.0
+        var opacity: Double = 1.0
+
+        let length = hexSanitized.count
+
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else { return nil }
+
+        if length == 6 {
+            red = Double((rgb & 0xFF0000) >> 16) / 255.0
+            green = Double((rgb & 0x00FF00) >> 8) / 255.0
+            blue = Double(rgb & 0x0000FF) / 255.0
+
+        } else if length == 8 {
+            red = Double((rgb & 0xFF000000) >> 24) / 255.0
+            green = Double((rgb & 0x00FF0000) >> 16) / 255.0
+            blue = Double((rgb & 0x0000FF00) >> 8) / 255.0
+            opacity = Double(rgb & 0x000000FF) / 255.0
+
+        } else {
+            return nil
+        }
+
+        self.init(.sRGB, red: red, green: green, blue: blue, opacity: opacity)
     }
 }
