@@ -6,7 +6,6 @@ struct ContentView: View {
     
     @State var authEvent: AuthChangeEvent?
     
-    
     var body: some View {
         Group {
             if authEvent == .signedOut {
@@ -27,17 +26,17 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environment(AuthController())
-            .environment(NetworkManager())
-            .environment(AquaLogicPalStore())
-        
-        ContentView()
-            .preferredColorScheme(.dark)
-            .environment(AuthController())
-            .environment(NetworkManager())
-            .environment(AquaLogicPalStore())
-    }
+#Preview {
+    ContentView()
+        .environment(AuthController())
+        .environment(NetworkManager())
+        .environment(AquaLogicPalStore())
+}
+
+#Preview {
+    ContentView()
+        .preferredColorScheme(.dark)
+        .environment(AuthController())
+        .environment(NetworkManager())
+        .environment(AquaLogicPalStore())
 }

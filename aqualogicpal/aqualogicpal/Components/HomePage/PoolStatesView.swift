@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct PoolStatesView: View {
+    @Environment(AquaLogicPalStore.self) private var store
+    
     @StateObject var client = AquaLogicClient.shared
     
     var body: some View {
@@ -34,4 +36,5 @@ struct PoolStatesView: View {
 
 #Preview {
     PoolStatesView()
+        .environment(AquaLogicPalStore())
 }

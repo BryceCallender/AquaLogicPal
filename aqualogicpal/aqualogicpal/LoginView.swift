@@ -2,9 +2,15 @@ import SwiftUI
 import Liquid
 
 struct LoginView: View {
+    enum Field: Hashable {
+        case username, password
+    }
+    
     @State var email = ""
     @State var password = ""
     @State var error: Error?
+    
+    @FocusState private var focusedField: Field?
     
     var body: some View {
         ZStack {
@@ -27,24 +33,32 @@ struct LoginView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     TextField("Email", text: $email)
                         .padding()
-                        .background(.white)
+                        .background(.cardBackground)
                         .cornerRadius(10.0)
                         .shadow(radius: 10.0)
                         .keyboardType(.emailAddress)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
-                        .foregroundStyle(.black)
+                        .focused($focusedField, equals: .username)
                     
                     SecureField("Password", text: $password)
                         .padding()
-                        .background(.white)
+                        .background(.cardBackground)
                         .cornerRadius(10.0)
                         .shadow(radius: 10.0)
                         .autocorrectionDisabled()
                         .textInputAutocapitalization(.never)
-                        .foregroundStyle(.black)
+                        .focused($focusedField, equals: .password)
                     
-                }.padding([.leading, .trailing, .bottom], 24)
+                }
+                .padding([.horizontal, .bottom], 24)
+                .onSubmit {
+                    if focusedField == .username {
+                        focusedField = .password
+                    } else {
+                        focusedField = nil
+                    }
+                }
                 
                 AsyncButton {
                     await login()
@@ -57,7 +71,7 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity)
                 }
                 .buttonStyle(.borderedProminent)
-                .padding([.leading, .trailing], 24)
+                .padding([.horizontal], 24)
                 
                 if let error {
                     Text(error.localizedDescription)

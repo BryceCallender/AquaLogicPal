@@ -1,9 +1,9 @@
 import Foundation
 
 struct SaltData: Codable, Identifiable, Comparable {
+    var id: Int
     var eventTime: Date
     var salt: Double
-    var id: Int
     
     enum CodingKeys: String, CodingKey {
         case id = "ID"

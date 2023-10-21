@@ -36,7 +36,7 @@ struct AcidContainer: View {
 }
 
 #Preview {
-    AcidContainer(progress: 0.50)
+    AcidContainer(progress: 1.0)
 }
 
 struct AcidWave: Shape {

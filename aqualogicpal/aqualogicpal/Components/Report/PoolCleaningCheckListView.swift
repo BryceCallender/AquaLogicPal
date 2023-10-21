@@ -3,6 +3,7 @@ import PhotosUI
 import SupabaseStorage
 
 struct PoolCleaningCheckListView: View {
+    @Environment(AquaLogicPalStore.self) private var store
     @Environment(\.dismiss) private var dismiss
     
     @State private var imageData: Data?
@@ -88,18 +89,12 @@ struct PoolCleaningCheckListView: View {
             cleaningRecord.chemicalImageUrl = try? supabase.storage.from(id: "chemicals").getPublicURL(path: path).absoluteString
         }
         
-        do {
-            try await supabase.database.from("Cleaning")
-                .insert(values: cleaningRecord).execute()
-        } catch {
-            print("### Insert Cleaning Record Error: \(error)")
-            self.error = error
-        }
-        
-        
+        cleaningRecord.timestamp = Date.now
+        await store.addCleaningRecord(cleaningRecord: cleaningRecord)
     }
 }
 
 #Preview {
     PoolCleaningCheckListView()
+        .environment(AquaLogicPalStore())
 }

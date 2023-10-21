@@ -29,21 +29,21 @@ struct HomeView: View {
                 Text("Display")
             }
             
-            NavigationStack {
-                InventoryView()
-                    .navigationTitle("Inventory")
-            }
-            .tabItem {
-                Image(systemName: "archivebox")
-                Text("Inventory")
-            }
+//            NavigationStack {
+//                InventoryView()
+//                    .navigationTitle("Inventory")
+//            }
+//            .tabItem {
+//                Image(systemName: "archivebox")
+//                Text("Inventory")
+//            }
             
             NavigationStack {
                 ReportsView()
                     .navigationTitle("Cleaning Reports")
             }
             .tabItem {
-                Image(systemName: "list.bullet.clipboard")
+                Image(systemName: "pencil.and.list.clipboard")
                 Text("Reports")
             }
             
@@ -66,4 +66,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environment(AquaLogicPalStore())
 }

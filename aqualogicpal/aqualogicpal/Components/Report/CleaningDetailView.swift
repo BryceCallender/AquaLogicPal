@@ -64,8 +64,7 @@ struct CleaningDetailView: View {
                             if cleaningDetail.addedChlorine {
                                 Card {
                                     HStack {
-                                        Text("Chlorine Levels")
-                                        
+                                        Text("Chlorine")
                                         
                                         Image(systemName: "arrow.up")
                                             .foregroundStyle(.blue)

@@ -11,6 +11,7 @@ struct ChlorinationView: View {
                 Spacer()
                 ChlorinationGaugeView(label: "Pool", chlorinationPercentage: client.aquaLogic?.poolChlorinatorPercent)
                 Spacer()
+                Spacer()
                 ChlorinationGaugeView(label: "Spa", chlorinationPercentage:
                     client.aquaLogic?.spaChlorinatorPercent)
                 Spacer()

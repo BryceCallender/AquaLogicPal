@@ -18,7 +18,7 @@ struct DiagnosticsView: View {
             Section {
                 NavigationLink(destination: SaltLevelRangeChart(isOverview: false)) {
                     VStack(alignment: .leading) {
-                        Text("Over the last year the salt levels averaged around 2400 PPM.")
+                        Text("Over the last year the salt levels averaged around \(store.averageSaltLevel) PPM.")
                         
                         SaltLevelRangeChart(isOverview: true)
                     }
@@ -28,7 +28,7 @@ struct DiagnosticsView: View {
             Section {
                 NavigationLink(destination:  SpaUseChart(isOverview: false)) {
                     VStack(alignment: .leading) {
-                        Text("Over the last year you used the spa an average of 7 times.")
+                        Text("Over the last year you used the spa an average of \(store.averageSpaUses) times.")
                         
                         SpaUseChart(isOverview: true)
                     }
@@ -44,6 +44,13 @@ struct DiagnosticsView: View {
                     }
                 }
             }
+        }
+        .task {
+            async let saltData = store.getSaltData()
+            async let spaData = store.getSpaData()
+            async let poolData = store.getPoolEvents()
+            
+            await [saltData, spaData, poolData]
         }
     }
 }

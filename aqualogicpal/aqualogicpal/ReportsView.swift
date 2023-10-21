@@ -12,13 +12,6 @@ struct ReportsView: View {
                 FilterCartridgesView()
             }
             
-//            Section(header: Text("Cleaning Records")) {
-//                ForEach(store.cleaningRecords) { record in
-//                    NavigationLink(destination: CleaningDetailView(cleaningDetail: record)) {
-//                        CleaningRow(cleaningDetail: record)
-//                    }
-//                }
-//            }
             Section(header: Text("Cleaning Records")) {
                 CalendarView(
                     interval: DateInterval(start: .distantPast, end: .distantFuture),

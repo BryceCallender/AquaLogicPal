@@ -67,6 +67,37 @@ extension Date {
         dateComponents.calendar = Calendar(identifier: .gregorian)
         return dateComponents
     }
+    
+    var month: Int {
+        return Calendar.current.component(.month, from: self)
+    }
+    
+    var year: Int {
+        return Calendar.current.component(.year, from: self)
+    }
+    
+    func startOfMonth() -> Date {
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: Calendar.current.startOfDay(for: self)))!
+    }
+    
+    func endOfMonth() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(month: 1, day: -1), to: self.startOfMonth())!
+    }
+    
+    func startOfYear() -> Date {
+        var dateComponents = DateComponents()
+        dateComponents.year = self.year
+        dateComponents.month = 1
+        dateComponents.day = 1
+        
+        // Create date from components
+        let userCalendar = Calendar.current
+        return Calendar.current.date(from: Calendar.current.dateComponents([.year, .month], from: userCalendar.date(from: dateComponents)!))!
+    }
+    
+    func endOfYear() -> Date {
+        return Calendar.current.date(byAdding: DateComponents(year: 1, day: -1), to: self.startOfYear())!
+    }
 }
 
 extension Color {

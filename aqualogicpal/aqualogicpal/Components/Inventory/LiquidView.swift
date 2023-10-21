@@ -26,5 +26,5 @@ struct LiquidView: View {
 }
 
 #Preview {
-    LiquidView(amount: 2.25)
+    LiquidView(amount: 1.0)
 }

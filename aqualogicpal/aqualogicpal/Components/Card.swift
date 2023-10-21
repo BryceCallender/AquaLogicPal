@@ -26,7 +26,7 @@ struct Card<Content: View>: View {
 }
 
 #Preview {
-    Card() {
+    Card {
         Text("I am in the card")
     }
 }

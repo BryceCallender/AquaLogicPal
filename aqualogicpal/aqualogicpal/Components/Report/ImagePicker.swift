@@ -9,18 +9,26 @@ struct ImagePicker: View {
     
     @Binding var imageData: Data?
     
+    @State private var loading: Bool = false
+    
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
             
             VStack(spacing: 8) {
-                Image(systemName: "square.and.arrow.up")
-                    .font(.largeTitle)
-                    .imageScale(.large)
-                    .foregroundStyle(.dragoonBlue)
-                
-                Text("Upload Chemical photo")
-                    .font(.callout)
+                if loading {
+                    ProgressView()
+                        .tint(.dragoonBlue)
+                        .scaleEffect(2.0)
+                } else {
+                    Image(systemName: "square.and.arrow.up")
+                        .font(.largeTitle)
+                        .imageScale(.large)
+                        .foregroundStyle(.dragoonBlue)
+                    
+                    Text("Upload Chemical photo")
+                        .font(.callout)
+                }
             }
             .frame(width: size.width, height: size.height, alignment: .center)
             .overlay {
@@ -47,10 +55,12 @@ struct ImagePicker: View {
             }
             .onChange(of: photoItem) {
                 Task {
+                    loading = true
                     if let data = try? await photoItem?.loadTransferable(type: Data.self) {
                         if let uiImage = UIImage(data: data) {
                             imageData = uiImage.jpegData(compressionQuality: 0.1)
                             previewImage = uiImage
+                            loading = false
                             return
                         }
                     }

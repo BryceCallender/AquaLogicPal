@@ -1,5 +1,5 @@
 import Foundation
 
-enum PoolEventType: String, Codable {
+enum PoolEventType: Int, Codable {
     case filter, lights, heater, waterfall
 }

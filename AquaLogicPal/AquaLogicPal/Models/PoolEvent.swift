@@ -8,6 +8,6 @@ struct PoolEvent: Codable, Identifiable {
     enum CodingKeys: String, CodingKey {
         case id = "ID"
         case eventTime = "EventTime"
-        case type = "PoolEventType"
+        case type = "EventType"
     }
 }

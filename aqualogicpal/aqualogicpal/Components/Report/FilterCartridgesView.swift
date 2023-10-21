@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct FilterCartridgesView: View {
-    @State private var filterRecord: FilterRecord? = nil
+    @Environment(AquaLogicPalStore.self) private var store
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,18 +27,7 @@ struct FilterCartridgesView: View {
         .frame(height: 200)
         .padding()
         .task {
-            await loadFilterRecord()
-        }
-        
-    }
-    
-    func loadFilterRecord() async {
-        do {
-            let filterQuery = supabase.database.from("Filters").select().single()
-            filterRecord = try await filterQuery.execute().value
-        } catch {
-            filterRecord = nil
-            print("### Loading Filter Record Error: \(error)")
+            await store.loadFilterRecord()
         }
     }
     
@@ -50,29 +39,37 @@ struct FilterCartridgesView: View {
                 
                 Spacer()
                 
-                Button {
-                    print("Edit button was tapped")
+                AsyncButton {
+                    await addFilterCleanedDate()
                 } label: {
-                    Image(systemName: "checkmark.circle")
+                    Image(systemName: "checkmark.gobackward")
                         .font(.title)
                 }
                 .buttonStyle(.plain)
             }
             
-            HStack {
+            HStack(spacing: 4) {
                 Text("Last Cleaned:")
                 
-                if let filterRecord = filterRecord {
+                if let filterRecord = store.filterRecord {
                     Text(filterRecord.cleanedOn, format: .dateTime.year().month())
                 } else {
                     ProgressView()
+                        .tint(.dragoonBlue)
+                        .padding(.leading)
+                        
                 }
             }
             .frame(height: 10)
         }
     }
+    
+    func addFilterCleanedDate() async {
+        await store.addFilterCleanedDate()
+    }
 }
 
 #Preview {
     FilterCartridgesView()
+        .environment(AquaLogicPalStore())
 }
