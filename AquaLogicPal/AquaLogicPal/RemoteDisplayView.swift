@@ -2,7 +2,7 @@ import SwiftUI
 
 struct RemoteDisplayView: View {
     var body: some View {
-        VStack(alignment: .leading) {
+        VStack(alignment: .center) {
             Spacer()
             ScreenView()
             Spacer()
