@@ -14,7 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         TabView {
-            NavigationView {
+            NavigationStack {
                 PoolControlsView()
                     .navigationTitle("Controls")
             }
@@ -47,7 +47,7 @@ struct HomeView: View {
                 Text("Reports")
             }
             
-            NavigationView {
+            NavigationStack {
                 DiagnosticsView()
                     .navigationTitle("Diagnostics")
             }
