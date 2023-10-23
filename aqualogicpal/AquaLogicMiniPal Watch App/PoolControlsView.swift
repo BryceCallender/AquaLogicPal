@@ -28,8 +28,6 @@ struct PoolControlsView: View {
     }
 }
 
-struct PoolControlsView_Previews: PreviewProvider {
-    static var previews: some View {
-        PoolControlsView()
-    }
+#Preview {
+    PoolControlsView()
 }

@@ -22,8 +22,6 @@ struct CustomPoolCardView: View {
     }
 }
 
-struct CustomPoolCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomPoolCardView(poolCard: PoolCard(label: "Spa", imageName: "hot_tub", state: .spa, isEnabled: false))
-    }
+#Preview {
+    CustomPoolCardView(poolCard: PoolCard(label: "Spa", imageName: "hot_tub", state: .spa, isEnabled: false))
 }
