@@ -1,5 +1,5 @@
 import SwiftUI
-import AlertToast
+//import AlertToast
 
 struct PoolControlsView: View {
     var body: some View {
@@ -11,9 +11,9 @@ struct PoolControlsView: View {
                 PoolStatesView()
             }
         }
-        .toast(isPresenting: $client.isConnecting) {
-            AlertToast(type: .loading, title: "Connecting...")
-        }
+//        .toast(isPresenting: $client.isConnecting) {
+//            AlertToast(type: .loading, title: "Connecting...")
+//        }
     }
 }
 
