@@ -57,8 +57,6 @@ struct TemperatureCardView: View {
     }
 }
 
-struct TemperatureCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        TemperatureCardView(label: "Air", temperature: 90, isMetric: true)
-    }
+#Preview {
+    TemperatureCardView(label: "Air", temperature: 90, isMetric: true)
 }

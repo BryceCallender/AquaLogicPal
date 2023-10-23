@@ -16,8 +16,6 @@ struct TemperaturesView: View {
     }
 }
 
-struct TemperaturesView_Previews: PreviewProvider {
-    static var previews: some View {
-        TemperaturesView()
-    }
+#Preview {
+    TemperaturesView()
 }

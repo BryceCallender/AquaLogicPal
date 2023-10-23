@@ -29,8 +29,6 @@ struct RemoteDisplayView: View {
     }
 }
 
-struct RemoteDisplayView_Previews: PreviewProvider {
-    static var previews: some View {
-        RemoteDisplayView()
-    }
+#Preview {
+    RemoteDisplayView()
 }

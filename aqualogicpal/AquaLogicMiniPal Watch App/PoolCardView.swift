@@ -35,8 +35,6 @@ struct PoolCardView: View {
     }
 }
 
-struct PoolCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        PoolCardView(poolCard: PoolCard(label: "Pool", imageName: "fanblades", state: .pool, isEnabled: true), animation: AnimationDetails(duration: 1.0))
-    }
+#Preview {
+    PoolCardView(poolCard: PoolCard(label: "Pool", imageName: "fanblades", state: .pool, isEnabled: true), animation: AnimationDetails(duration: 1.0))
 }

@@ -13,7 +13,6 @@
 		0209B40B2A926FE300C2899A /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209B40A2A926FE300C2899A /* CheckBoxView.swift */; };
 		0209B40F2A92E0E000C2899A /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0209B40E2A92E0E000C2899A /* Checkbox.swift */; };
 		020DB3562AC6995900E08C6A /* SpaEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020DB3552AC6995900E08C6A /* SpaEvent.swift */; };
-		02167FBE2A95C7E400DFD01A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 02167FBD2A95C7E400DFD01A /* AlertToast */; };
 		022823012A4BE9FD00ABC0C5 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022823002A4BE9FD00ABC0C5 /* LoginView.swift */; };
 		022AECDF2A834731003FE79F /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 022AECDE2A834731003FE79F /* Supabase */; };
 		023B1F292A48CC890008D31E /* ChlorinationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023B1F282A48CC890008D31E /* ChlorinationView.swift */; };
@@ -280,7 +279,6 @@
 				022AECDF2A834731003FE79F /* Supabase in Frameworks */,
 				02B4155F2A4F6F9600BEE718 /* Alamofire in Frameworks */,
 				0272EEF82A428B6A000A70C5 /* PusherSwift in Frameworks */,
-				02167FBE2A95C7E400DFD01A /* AlertToast in Frameworks */,
 				025572842A61191E00854441 /* Liquid in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -574,7 +572,6 @@
 				02B4155E2A4F6F9600BEE718 /* Alamofire */,
 				025572832A61191E00854441 /* Liquid */,
 				022AECDE2A834731003FE79F /* Supabase */,
-				02167FBD2A95C7E400DFD01A /* AlertToast */,
 				02E3602B2AAD10740084F0A4 /* PopupView */,
 			);
 			productName = aqualogicpal;
@@ -633,7 +630,6 @@
 				02B4155D2A4F6F9600BEE718 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				025572822A61191E00854441 /* XCRemoteSwiftPackageReference "liquid" */,
 				022AECDD2A834731003FE79F /* XCRemoteSwiftPackageReference "supabase-swift" */,
-				02167FBC2A95C7E300DFD01A /* XCRemoteSwiftPackageReference "AlertToast" */,
 				02E3602A2AAD10740084F0A4 /* XCRemoteSwiftPackageReference "PopupView" */,
 			);
 			productRefGroup = 02A692732A3E661100F88EBE /* Products */;
@@ -1010,6 +1006,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1049,6 +1046,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1168,14 +1166,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		02167FBC2A95C7E300DFD01A /* XCRemoteSwiftPackageReference "AlertToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elai950/AlertToast.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.3.9;
-			};
-		};
 		022AECDD2A834731003FE79F /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/supabase/supabase-swift.git";
@@ -1219,11 +1209,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		02167FBD2A95C7E400DFD01A /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 02167FBC2A95C7E300DFD01A /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
-		};
 		022AECDE2A834731003FE79F /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 022AECDD2A834731003FE79F /* XCRemoteSwiftPackageReference "supabase-swift" */;

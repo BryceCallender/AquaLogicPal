@@ -1,5 +1,5 @@
 import SwiftUI
-import AlertToast
+//import AlertToast
 
 struct InventoryDetail: View {
     @Environment(\.editMode) private var editMode
@@ -67,13 +67,13 @@ struct InventoryDetail: View {
                 }
             }
         }
-        .toast(isPresenting: $showToast) {
-            if error != nil {
-                AlertToast(displayMode: .hud, type: .error(.red), title: "Error!", subTitle: error?.localizedDescription)
-            } else {
-                AlertToast(displayMode: .hud, type: .complete(.green), title: "Saved!")
-            }
-        }
+//        .toast(isPresenting: $showToast) {
+//            if error != nil {
+//                AlertToast(displayMode: .hud, type: .error(.red), title: "Error!", subTitle: error?.localizedDescription)
+//            } else {
+//                AlertToast(displayMode: .hud, type: .complete(.green), title: "Saved!")
+//            }
+//        }
     }
     
     func updateAmount() async {
