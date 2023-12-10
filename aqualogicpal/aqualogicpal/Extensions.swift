@@ -55,7 +55,7 @@ extension ChartContent {
 }
 
 extension Date {
-    func toDateComponents() -> DateComponents {
+    var dateComponents: DateComponents {
         var dateComponents = Calendar.current.dateComponents(
             [.month,
              .day,
@@ -120,13 +120,11 @@ extension Color {
             red = Double((rgb & 0xFF0000) >> 16) / 255.0
             green = Double((rgb & 0x00FF00) >> 8) / 255.0
             blue = Double(rgb & 0x0000FF) / 255.0
-
         } else if length == 8 {
             red = Double((rgb & 0xFF000000) >> 24) / 255.0
             green = Double((rgb & 0x00FF0000) >> 16) / 255.0
             blue = Double((rgb & 0x0000FF00) >> 8) / 255.0
             opacity = Double(rgb & 0x000000FF) / 255.0
-
         } else {
             return nil
         }

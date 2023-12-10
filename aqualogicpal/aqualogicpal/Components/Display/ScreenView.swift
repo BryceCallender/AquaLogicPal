@@ -38,6 +38,7 @@ struct ScreenView: View {
                     }
                 }
             }
+            .animation(.easeIn, value: client.aquaLogic?.display?.displaySections ?? waitingScreen)
         }
         .padding()
     }

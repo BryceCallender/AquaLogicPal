@@ -45,6 +45,7 @@ struct DiagnosticsView: View {
                 }
             }
         }
+        .scrollIndicators(ScrollIndicatorVisibility.hidden)
         .task {
             async let saltData = store.getSaltData()
             async let spaData = store.getSpaData()

@@ -5,6 +5,7 @@ import Charts
 
 struct SaltLevelRangeChart: View {
     @Environment(AquaLogicPalStore.self) private var store
+    @StateObject var client = AquaLogicClient.shared
     
     var isOverview: Bool
     
@@ -50,6 +51,7 @@ struct SaltLevelRangeChart: View {
                        chart
                        ChartDetailCard(title: "Recommended", value: "2700 - 3400 PPM")
                            .padding(.top)
+                       ChartDetailCard(title: "Current Level", value: "\(client.aquaLogic?.saltLevel ?? 0)")
                        Spacer()
                    }
                    .padding()
@@ -107,7 +109,7 @@ struct SaltLevelRangeChart: View {
                 RuleMark(
                     x: .value("Selected", selectedDateValue.date, unit: .day)
                 )
-                .foregroundStyle(.gray.opacity(0.1))
+                .foregroundStyle(.gray.opacity(0.3))
                 
                 .offset(yStart: -10)
                 .zIndex(-1)

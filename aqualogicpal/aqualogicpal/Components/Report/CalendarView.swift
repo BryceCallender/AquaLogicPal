@@ -23,8 +23,16 @@ struct CalendarView: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
-        let reports = store.cleaningRecords.map { $0.timestamp!.toDateComponents() }
-        uiView.reloadDecorations(forDateComponents: reports, animated: true)
+        if let addedReport = store.changedCleaningRecord {
+            uiView.reloadDecorations(forDateComponents: [addedReport.timestamp!.dateComponents], animated: true)
+            store.changedCleaningRecord = nil
+        }
+        
+        let reports = store.cleaningRecords.map { $0.timestamp!.dateComponents }
+        if !reports.isEmpty {
+            let currentMonthReports = reports.filter { $0.month! == Date.now.month }
+            uiView.reloadDecorations(forDateComponents: currentMonthReports, animated: true)
+        }
     }
     
     func makeCoordinator() -> Coordinator {

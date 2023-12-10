@@ -20,6 +20,7 @@ struct ReportsView: View {
                 )
             }
         }
+        .scrollIndicators(ScrollIndicatorVisibility.hidden)
         .task {
             await loadCleaningRecords()
         }

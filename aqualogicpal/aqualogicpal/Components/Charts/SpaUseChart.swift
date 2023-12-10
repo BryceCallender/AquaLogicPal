@@ -52,16 +52,20 @@ struct SpaUseChart: View {
                 .padding([.horizontal, .top])
                 
                 if selectedContentType == .graph {
-                    VStack(alignment: .leading) {
-                        header
-                        chart
-                        ChartDetailCard(title: "Most Used", value: store.spaData.max()?.eventTime.formatted(.dateTime.month(.wide)))
-                            .padding(.top)
-                        ChartDetailCard(title: "Average Duration", value: Formatter.timeIntervalFormatter.string(from: store.averageSpaDuration))
-                        ChartDetailCard(title: "Highest Temp", value: maxTemp)
-                        Spacer()
+                    ScrollView(showsIndicators: false) {
+                        VStack (alignment: .leading) {
+                            header
+                            chart
+                            ChartDetailCard(title: "Most Used", value: store.spaData.max()?.eventTime.formatted(.dateTime.month(.wide)))
+                                .padding(.top, 8)
+                            ChartDetailCard(title: "Average Duration", value: Formatter.timeIntervalFormatter.string(from: store.averageSpaDuration))
+                                .padding(.top, 8)
+                            ChartDetailCard(title: "Highest Temp", value: maxTemp)
+                                .padding(.top, 8)
+                            Spacer()
+                        }
+                        .padding()
                     }
-                    .padding()
                 } else {
                     List {
                         Section(header: Text("Records")) {
@@ -115,7 +119,7 @@ struct SpaUseChart: View {
                 RuleMark(
                     x: .value("Selected", selectedDateValue.date, unit: .day)
                 )
-                .foregroundStyle(.gray.opacity(0.1))
+                .foregroundStyle(.gray.opacity(0.3))
                 
                 .offset(yStart: -10)
                 .zIndex(-1)
@@ -126,24 +130,6 @@ struct SpaUseChart: View {
                     ChartPopoverView()
                 }
             }
-            
-//            if isOverview {
-//                RuleMark(
-//                    y: .value("Average", 10)
-//                )
-//                .lineStyle(StrokeStyle(lineWidth: 5))
-//                .foregroundStyle(.dragoonBlue)
-//                .annotation(position: .top, alignment: .leading) {
-//                    Text("Average Uses")
-//                        .accessibilityLabel("Average")
-//                        .font(.caption.bold())
-//                        .foregroundStyle(.secondary)
-//                }
-//                .annotation(position: .bottom, alignment: .leading) {
-//                    Text("10")
-//                        .font(.title3.bold()) + Text(" uses").font(.callout).foregroundStyle(.secondary)
-//                }
-//            }
         }
         .chartXAxis {
             AxisMarks(values: .stride(by: Calendar.Component.month)) { _ in
@@ -159,9 +145,9 @@ struct SpaUseChart: View {
         .chartXAxis(isOverview ? .hidden : .automatic)
         .chartYAxis(isOverview ? .hidden : .automatic)
         .frame(height: isOverview ? Constants.previewChartHeight : Constants.detailChartHeight)
-        .task {
+//        .task {
 //            await store.getSpaData()
-        }
+//        }
     }
     
     @ViewBuilder
@@ -206,7 +192,7 @@ struct SpaUseChart: View {
             
             Text("\(selectedDateValue!.date.formatted(.dateTime.month().year()))")
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 4)
         .padding(.horizontal)
         .background(.popoutBackground, in: .rect(cornerRadius: 10))
     }

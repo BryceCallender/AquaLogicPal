@@ -16,10 +16,7 @@ struct ContentView: View {
         }
         .task {
             for await event in supabase.auth.authEventChange {
-                withAnimation {
-                    authEvent = event
-                }
-                
+                authEvent = event                
                 auth.session = try? await supabase.auth.session
             }
         }

@@ -21,7 +21,9 @@ struct TemperatureCardView: View {
                 
                 Text(temperatureToLabel())
                     .font(.title2)
+                    .contentTransition(.numericText(value: Double(temperature ?? 0)))
             }
+            .animation(.smooth, value: temperature)
             .padding()
             .multilineTextAlignment(.center)
         }

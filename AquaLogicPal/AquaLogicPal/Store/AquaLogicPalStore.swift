@@ -6,6 +6,8 @@ import ActivityKit
     var inventory = [InventoryItem]()
     var cleaningRecords = [CleaningRecord]()
     
+    var changedCleaningRecord: CleaningRecord?
+    
     var saltEvents: [SaltData]
     var saltRange: [SaltRange]
     var saltMin: Double
@@ -130,7 +132,7 @@ import ActivityKit
                     maxSpaTemp = sectionMaxTemp
                 }
                 
-                spaEvents = section.value + spaEvents
+                spaEvents = section.value.sorted(by: { $0.endTime.compare($1.endTime) == .orderedDescending })  + spaEvents
             }
             
             if sortedKeysAndValues.count > 0 {
@@ -193,7 +195,7 @@ import ActivityKit
                     saltMax = max.salt
                 }
                 
-                saltEvents = section.value + saltEvents
+                saltEvents = section.value.sorted(by: { $0.eventTime.compare($1.eventTime) == .orderedDescending }) + saltEvents
                 saltRange[min.eventTime.month - 1] = SaltRange(eventTime: min.eventTime, minSalt: min.salt, maxSalt: max.salt)
             }
             
@@ -277,6 +279,7 @@ import ActivityKit
             try await supabase.database.from("Cleaning")
                 .insert(values: cleaningRecord).execute()
             cleaningRecords.append(cleaningRecord)
+            changedCleaningRecord = cleaningRecord
         } catch {
             print("### Insert Cleaning Record Error: \(error)")
         }
